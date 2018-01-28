@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品管理</title>
+    <link href='../../utils/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+    <script src='../../utils/request/request.js'></script>
+
+
+</head>
+
+<body>
+
+    <div id="pageApp">
+
+        <nav-comp>
+
+            <el-container>
+
+                <el-main>
+                    <div class="content padding-10">
+
+                        <goods-list-comp @edit='editGoods' @add='addGoods' ref='goodsList' v-show='list.isShow' :showItem='{}'></goods-list-comp>
+                        <goods-add-comp type='add' @on-success='addSuccess' @cancel='cancel' v-show='add.isShow'></goods-add-comp>
+                        <goods-add-comp @cancel='cancel' @on-success='saveSuccess' type='save' ref='editGoods' :item.sync='edit.item' v-show='edit.isShow'></goods-add-comp>
+
+                    </div>
+
+                </el-main>
+
+            </el-container>
+
+
+        </nav-comp>
+
+    </div>
+
+
+
+</body>
+
+</html>

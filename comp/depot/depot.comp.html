@@ -1,0 +1,16 @@
+<div class="depot-comp">
+    {{title}}
+    <el-form ref="depotForm" :model="depot" label-width="80px">
+
+        <el-form-item label="仓库名">
+            <el-input v-model="depot.data.depot_name"></el-input>
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" @click="onSubmit">保存</el-button>
+            <el-button @click='cancel'>取消</el-button>
+        </el-form-item>
+
+    </el-form>
+
+
+</div>

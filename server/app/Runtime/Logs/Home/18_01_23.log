@@ -1,0 +1,2273 @@
+[ 2018-01-23T09:48:04+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000627s ]
+
+[ 2018-01-23T09:48:04+08:00 ] 127.0.0.1 /server/home/index/getCode/0.32407113746100547
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 70 and defined D:\database\Project\working\company\aoAdmin\server\app\Home\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Home\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2018-01-23T09:49:48+08:00 ] 127.0.0.1 /server/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000332s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001781s ]
+NOTIC: [2] Missing argument 1 for F(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 9 and defined D:\database\Project\working\company\aoAdmin\server\ThinkPHP\Common\functions.php 第 1125 行.
+NOTIC: [8] Undefined variable: name D:\database\Project\working\company\aoAdmin\server\ThinkPHP\Common\functions.php 第 1127 行.
+NOTIC: [8] Undefined variable: name D:\database\Project\working\company\aoAdmin\server\ThinkPHP\Common\functions.php 第 1145 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000851s ]
+
+[ 2018-01-23T09:51:10+08:00 ] 127.0.0.1 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2018-01-23T09:51:31+08:00 ] 127.0.0.1 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 122 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0405s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000682s ]
+
+[ 2018-01-23T09:51:31+08:00 ] 127.0.0.1 /server/home/index/getCode/0.4400908747493222
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 122 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 85 and defined D:\database\Project\working\company\aoAdmin\server\app\Home\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Home\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000946s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001028s ]
+
+[ 2018-01-23T09:51:32+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 122 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000631s ]
+
+[ 2018-01-23T09:59:19+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 122 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000686s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2018-01-23T10:00:39+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001494s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001059s ]
+
+[ 2018-01-23T10:00:40+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000776s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2018-01-23T10:00:40+08:00 ] 127.0.0.1 /server/home/feedback/getList?table=feedback&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0811s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0005s ]
+SQL: SELECT t1.*,t2.user_id,t2.user_name FROM ao_feedback as t1,ao_user as t2 WHERE ( t1.user_id = t2.user_id ) ORDER BY t1.add_time desc  [ RunTime:0.1243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
+
+[ 2018-01-23T10:01:58+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000943s ]
+
+[ 2018-01-23T10:01:58+08:00 ] 127.0.0.1 /server/home/feedback/getList?table=feedback&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0005s ]
+SQL: SELECT t1.*,t2.user_id,t2.user_name FROM ao_feedback as t1,ao_user as t2 WHERE ( t1.user_id = t2.user_id ) ORDER BY t1.add_time desc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000664s ]
+
+[ 2018-01-23T10:02:00+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000686s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+
+[ 2018-01-23T10:02:00+08:00 ] 127.0.0.1 /server/home/feedback/getList?table=feedback&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0006s ]
+SQL: SELECT t1.*,t2.user_id,t2.user_name FROM ao_feedback as t1,ao_user as t2 WHERE ( t1.user_id = t2.user_id ) ORDER BY t1.add_time desc  [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000807s ]
+
+[ 2018-01-23T10:02:04+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000798s ]
+
+[ 2018-01-23T10:02:16+08:00 ] 127.0.0.1 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0010s ]
+SQL: INSERT INTO `ao_feedback` (`user_id`,`info`,`type`,`add_time`,`edit_time`) VALUES ('121389','asdasdasas','BUG','1516672936','1516672936') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000825s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000872s ]
+
+[ 2018-01-23T10:02:23+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000838s ]
+
+[ 2018-01-23T14:09:42+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000759s ]
+
+[ 2018-01-23T14:09:45+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2018-01-23T14:09:48+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2018-01-23T14:09:49+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2018-01-23T14:18:15+08:00 ] 192.168.1.4 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000606s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2018-01-23T14:18:42+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2018-01-23T14:18:51+08:00 ] 192.168.1.4 /server/home/index/get/1/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000611s ]
+
+[ 2018-01-23T14:18:57+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2018-01-23T14:20:24+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2018-01-23T14:27:51+08:00 ] 192.168.1.4 /server/home/index/get?info=dedede
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2018-01-23T14:28:16+08:00 ] 192.168.1.4 /server/home/index/get?info=dede
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2018-01-23T14:28:23+08:00 ] 192.168.1.4 /server/home/index/get?info=dede
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2018-01-23T14:29:43+08:00 ] 192.168.1.4 /server/home/index/get?info=dede
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2018-01-23T14:29:47+08:00 ] 192.168.1.4 /server/home/index/get?info=hyh
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2018-01-23T14:30:40+08:00 ] 192.168.1.4 /server/home/index/get?info=defe
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000608s ]
+
+[ 2018-01-23T14:30:41+08:00 ] 192.168.1.4 /server/home/index/get?info=defe
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2018-01-23T14:31:16+08:00 ] 192.168.1.4 /server/home/index/get?info=frgfr
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000489s ]
+
+[ 2018-01-23T14:38:48+08:00 ] 192.168.1.4 /server/home/index/get?info=ferfrf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2018-01-23T14:39:45+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000546s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2018-01-23T14:39:51+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2018-01-23T14:40:17+08:00 ] 192.168.1.4 /server/home/index/get?info=ferfrf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2018-01-23T14:40:44+08:00 ] 192.168.1.4 /server/home/index/get?info=dede
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2018-01-23T14:42:41+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2018-01-23T14:42:57+08:00 ] 192.168.1.4 /server/home/index/get?info=RFR
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001762s ]
+
+[ 2018-01-23T14:43:11+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2018-01-23T14:44:03+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001146s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001204s ]
+
+[ 2018-01-23T14:44:38+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2018-01-23T14:45:44+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2018-01-23T14:48:30+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2018-01-23T14:48:41+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2018-01-23T14:49:14+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2018-01-23T14:50:04+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2018-01-23T14:52:16+08:00 ] 192.168.1.4 /server/home/index/get
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2018-01-23T14:54:21+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+
+[ 2018-01-23T14:54:29+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+
+[ 2018-01-23T14:55:21+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0007s ]
+ERR: 1364:Field 'user_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `ao_feedback` (`add_time`,`edit_time`) VALUES ('1516690521','1516690521')
+ERR: 1364:Field 'user_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `ao_feedback` (`add_time`,`edit_time`) VALUES ('1516690521','1516690521')
+
+[ 2018-01-23T14:55:46+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0005s ]
+ERR: 1364:Field 'user_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `ao_feedback` (`add_time`,`edit_time`) VALUES ('1516690546','1516690546')
+ERR: 1364:Field 'user_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `ao_feedback` (`add_time`,`edit_time`) VALUES ('1516690546','1516690546')
+
+[ 2018-01-23T14:56:40+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+
+[ 2018-01-23T14:56:52+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+
+[ 2018-01-23T14:56:57+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0010s ]
+ERR: 1364:Field 'user_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `ao_feedback` (`add_time`,`edit_time`) VALUES ('1516690617','1516690617')
+ERR: 1364:Field 'user_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `ao_feedback` (`add_time`,`edit_time`) VALUES ('1516690617','1516690617')
+
+[ 2018-01-23T14:57:04+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+
+[ 2018-01-23T14:57:12+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0006s ]
+
+[ 2018-01-23T14:57:22+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0005s ]
+
+[ 2018-01-23T14:57:29+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0005s ]
+ERR: 1364:Field 'user_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `ao_feedback` (`add_time`,`edit_time`) VALUES ('1516690649','1516690649')
+ERR: 1364:Field 'user_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `ao_feedback` (`add_time`,`edit_time`) VALUES ('1516690649','1516690649')
+
+[ 2018-01-23T14:57:34+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0011s ]
+
+[ 2018-01-23T14:57:41+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0005s ]
+
+[ 2018-01-23T14:58:02+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0010s ]
+ERR: 1364:Field 'user_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `ao_feedback` (`add_time`,`edit_time`) VALUES ('1516690682','1516690682')
+ERR: 1364:Field 'user_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `ao_feedback` (`add_time`,`edit_time`) VALUES ('1516690682','1516690682')
+
+[ 2018-01-23T14:58:59+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0009s ]
+SQL: INSERT INTO `ao_feedback` (`type`,`info`,`user_id`,`add_time`,`edit_time`) VALUES ('BUG','qq','121389','1516690739','1516690739') [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000645s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000676s ]
+
+[ 2018-01-23T14:59:05+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000694s ]
+
+[ 2018-01-23T14:59:34+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0005s ]
+SQL: INSERT INTO `ao_feedback` (`type`,`info`,`user_id`,`add_time`,`edit_time`) VALUES ('BUG','frfr','121389','1516690774','1516690774') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2018-01-23T15:00:02+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `ao_admin` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_admin` WHERE `admin_id` = 'root' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000715s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000748s ]
+
+[ 2018-01-23T15:00:06+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0005s ]
+SQL: INSERT INTO `ao_feedback` (`type`,`info`,`user_id`,`add_time`,`edit_time`) VALUES ('BUG','fefef','121389','1516690806','1516690806') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2018-01-23T15:18:00+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 111 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2018-01-23T15:21:23+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: result D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 55 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000627s ]
+
+[ 2018-01-23T15:23:03+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 124 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000609s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2018-01-23T15:23:16+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 124 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000667s ]
+
+[ 2018-01-23T15:24:31+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 125 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: mdoel D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 64 行.
+
+[ 2018-01-23T15:25:42+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: mdoel D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 64 行.
+
+[ 2018-01-23T15:26:09+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: mdoel D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 64 行.
+
+[ 2018-01-23T15:27:30+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0008s ]
+ERR: 1366:Incorrect string value: '\x93\x18%\xA1\xD7\x94...' for column 'token' at row 1
+ [ SQL语句 ] : REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','+f/mx�%�ה�sE�','1516692450','1516692450')
+ERR: 1366:Incorrect string value: '\x93\x18%\xA1\xD7\x94...' for column 'token' at row 1
+ [ SQL语句 ] : REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','+f/mx�%�ה�sE�','1516692450','1516692450')
+
+[ 2018-01-23T15:29:08+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0009s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','2a03e45ae92d75498ce7e8e5974a13c9','1516692548','1516692548') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2018-01-23T15:29:18+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0008s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','b8f653dbb3ae8a0fd4ad17470a64d609','1516692558','1516692558') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000689s ]
+
+[ 2018-01-23T15:30:04+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0008s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','44ef3d9bff6fc512ac9a4c4f4c54265e','1516692604','1516692604') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000658s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2018-01-23T15:30:06+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0004s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','43614861d2bc591cb3e54bc10f848ce1','1516692606','1516692606') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000701s ]
+
+[ 2018-01-23T15:30:10+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0008s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','00e86901a8e736ee2c610c0176536c6d','1516692610','1516692610') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000722s ]
+
+[ 2018-01-23T15:30:13+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0009s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','ac3bae71fb10c966a3209b78d9b530fb','1516692613','1516692613') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2018-01-23T15:30:29+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121389' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0009s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121389','aa043f78d241b82019146d25720ace6d','1516692629','1516692629') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000692s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2018-01-23T15:30:31+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121389' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0004s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121389','1f2a17a1332ddcf418d76ccd364603cc','1516692631','1516692631') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000650s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2018-01-23T15:30:47+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '12138945' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2018-01-23T15:34:24+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121389' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0009s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121389','52d332d6cde2692bb5dc006c4c8ffe3f','1516692864','1516692864') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2018-01-23T15:34:52+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 135 行.
+
+[ 2018-01-23T15:36:13+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 135 行.
+
+[ 2018-01-23T15:36:24+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000838s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000881s ]
+
+[ 2018-01-23T15:36:54+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121389' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0011s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121389','7f6765dd382a382785c81de5cfb6d4bb','1516693014','1516693014') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000792s ]
+
+[ 2018-01-23T15:37:03+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121389' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0009s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121389','f1b52205890699777e3f8185c76c6559','1516693023','1516693023') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000745s ]
+
+[ 2018-01-23T15:40:41+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121389' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0009s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121389','c071c420f7ca2401cf188e328b534774','1516693241','1516693241') [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001202s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001280s ]
+
+[ 2018-01-23T15:47:12+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121389' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0004s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121389','111a18a0a1d2c9d5b1a47447a71924f0','1516693632','1516693632') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000690s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2018-01-23T15:47:15+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121389' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0004s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121389','306f46dcc274197e48bebf0ef7c633b7','1516693635','1516693635') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2018-01-23T15:48:25+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2018-01-23T15:48:55+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001084s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000670s ]
+
+[ 2018-01-23T15:56:13+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '' AND `token` = '' LIMIT 1   [ RunTime:0.0003s ]
+ERR: 1146:Table 'ao.ao_' doesn't exist
+ [ SQL语句 ] : INSERT INTO `ao_` (`add_time`,`edit_time`) VALUES ('1516694173','1516694173')
+ERR: 1146:Table 'ao.ao_' doesn't exist
+ [ SQL语句 ] : INSERT INTO `ao_` (`add_time`,`edit_time`) VALUES ('1516694173','1516694173')
+
+[ 2018-01-23T16:02:48+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2018-01-23T16:02:54+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0004s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','07129770481adc008cf00678ea1f9f22','1516694574','1516694574') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2018-01-23T16:02:58+08:00 ] 192.168.1.4 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '07129770481adc008cf00678ea1f9f22' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2018-01-23T16:03:06+08:00 ] 192.168.1.4 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '07129770481adc008cf00678ea1f9f22' LIMIT 1   [ RunTime:0.0003s ]
+SQL: DELETE FROM `ao_token` WHERE `user_id` = '121388' [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2018-01-23T16:04:09+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0004s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','1e127c2124bd8bbe4cbdef091bdf7185','1516694649','1516694649') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000706s ]
+
+[ 2018-01-23T16:04:11+08:00 ] 192.168.1.4 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2018-01-23T16:04:15+08:00 ] 192.168.1.4 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000705s ]
+
+[ 2018-01-23T16:04:22+08:00 ] 192.168.1.4 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+SQL: DELETE FROM `ao_token` WHERE `user_id` = '121388' [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2018-01-23T16:04:23+08:00 ] 192.168.1.4 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2018-01-23T16:04:25+08:00 ] 192.168.1.4 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2018-01-23T16:04:26+08:00 ] 192.168.1.4 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2018-01-23T16:04:37+08:00 ] 192.168.1.4 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000666s ]
+
+[ 2018-01-23T16:04:44+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = 'false' AND `token` = 'false' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000698s ]
+
+[ 2018-01-23T16:04:44+08:00 ] 127.0.0.1 /server/home/index/getCode/0.3186419352511025
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000946s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000731s ]
+
+[ 2018-01-23T16:04:49+08:00 ] 127.0.0.1 /server/home/index/getCode/0.00616101010586334
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001134s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001225s ]
+
+[ 2018-01-23T16:04:53+08:00 ] 127.0.0.1 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2018-01-23T16:04:53+08:00 ] 127.0.0.1 /server/home/index/getCode/0.7983527487235391
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000969s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000838s ]
+
+[ 2018-01-23T16:04:57+08:00 ] 127.0.0.1 /server/home/index/getCode/0.7931852493487985
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2018-01-23T16:05:27+08:00 ] 127.0.0.1 /server/home/index/getCode/0.912177944568551
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000628s ]
+
+[ 2018-01-23T16:05:54+08:00 ] 127.0.0.1 /server/home/index/getCode/0.1599032417540689
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001077s ]
+
+[ 2018-01-23T16:05:59+08:00 ] 127.0.0.1 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2018-01-23T16:05:59+08:00 ] 127.0.0.1 /server/home/index/getCode/0.869923334130136
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2018-01-23T16:06:35+08:00 ] 127.0.0.1 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000892s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000967s ]
+
+[ 2018-01-23T16:06:35+08:00 ] 127.0.0.1 /server/home/index/getCode/0.30932738316751385
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001483s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001174s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001271s ]
+
+[ 2018-01-23T16:06:35+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001758s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = 'false' AND `token` = 'false' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-01-23T16:06:36+08:00 ] 127.0.0.1 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000896s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000959s ]
+
+[ 2018-01-23T16:06:36+08:00 ] 127.0.0.1 /server/home/index/getCode/0.2928507172638932
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001442s ]
+
+[ 2018-01-23T16:06:37+08:00 ] 127.0.0.1 /server/home/index/getCode/0.09274485893437556
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000757s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000838s ]
+
+[ 2018-01-23T16:06:38+08:00 ] 127.0.0.1 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2018-01-23T16:06:38+08:00 ] 127.0.0.1 /server/home/index/getCode/0.34929365446588956
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000878s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000958s ]
+
+[ 2018-01-23T16:06:59+08:00 ] 127.0.0.1 /server/home/index/getCode/0.6916503178379614
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2018-01-23T16:07:01+08:00 ] 127.0.0.1 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000753s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2018-01-23T16:07:01+08:00 ] 127.0.0.1 /server/home/index/getCode/0.17502228437858314
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2018-01-23T16:07:04+08:00 ] 127.0.0.1 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+
+[ 2018-01-23T16:07:04+08:00 ] 127.0.0.1 /server/home/index/getCode/0.22578260126294847
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001463s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001011s ]
+
+[ 2018-01-23T16:07:05+08:00 ] 127.0.0.1 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000867s ]
+
+[ 2018-01-23T16:07:05+08:00 ] 127.0.0.1 /server/home/index/getCode/0.7982886711483619
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+NOTIC: [2] Missing argument 1 for getCode(), called in D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php on line 90 and defined D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 36 行.
+NOTIC: [8] Undefined variable: cfg D:\database\Project\working\company\aoAdmin\server\app\Common\Common\function.php 第 39 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000970s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001064s ]
+
+[ 2018-01-23T16:07:38+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = 'false' AND `token` = 'false' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000648s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2018-01-23T16:07:47+08:00 ] 127.0.0.1 /server/home/index/isLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = 'false' AND `token` = 'false' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2018-01-23T16:13:44+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000880s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000944s ]
+
+[ 2018-01-23T16:14:14+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000888s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000950s ]
+
+[ 2018-01-23T16:14:27+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = 'false' LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001906s ]
+
+[ 2018-01-23T16:15:48+08:00 ] 192.168.1.4 /server/home/feedback/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-23T16:16:11+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=FEFE&add%5Buser_id%5D=121389&user_id=121388&token=1e127c2124bd8bbe4cbdef091bdf7185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-23T16:16:25+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=FEFE&add%5Buser_id%5D=121389&user_id=121388&token=1e127c2124bd8bbe4cbdef091bdf7185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-23T16:17:38+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=EDE&add%5Buser_id%5D=121389&user_id=121388&token=1e127c2124bd8bbe4cbdef091bdf7185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-23T16:17:42+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=EDE&add%5Buser_id%5D=121389&user_id=121388&token=1e127c2124bd8bbe4cbdef091bdf7185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-23T16:18:08+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=EDEDE&add%5Buser_id%5D=121389&user_id=121388&token=1e127c2124bd8bbe4cbdef091bdf7185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-23T16:18:10+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=EDEDE&add%5Buser_id%5D=121389&user_id=121388&token=1e127c2124bd8bbe4cbdef091bdf7185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-23T16:22:28+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=xssx&add%5Buser_id%5D=121389&user_id=121388&token=1e127c2124bd8bbe4cbdef091bdf7185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-23T16:22:31+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=xssx&add%5Buser_id%5D=121389&user_id=121388&token=1e127c2124bd8bbe4cbdef091bdf7185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-23T16:22:46+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=xssx&add%5Buser_id%5D=121389&user_id=121388&token=1e127c2124bd8bbe4cbdef091bdf7185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-23T16:24:04+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=xssx&add%5Buser_id%5D=121389&user_id=121388&token=1e127c2124bd8bbe4cbdef091bdf7185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-23T16:26:13+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=deede&add%5Buser_id%5D=121389&user_id=121388&token=1e127c2124bd8bbe4cbdef091bdf7185
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1e127c2124bd8bbe4cbdef091bdf7185' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-23T16:26:25+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0004s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','df68c18ee75af1afef7dc30d65d576c5','1516695985','1516695985') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000717s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2018-01-23T16:26:35+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=123&add%5Buser_id%5D=121389&user_id=121388&token=df68c18ee75af1afef7dc30d65d576c5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = 'df68c18ee75af1afef7dc30d65d576c5' LIMIT 1   [ RunTime:0.0003s ]
+SQL: DELETE FROM `ao_token` WHERE `user_id` = '121388' [ RunTime:0.0002s ]
+
+[ 2018-01-23T16:27:09+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=dee&add%5Buser_id%5D=121389&user_id=121388&token=df68c18ee75af1afef7dc30d65d576c5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = 'df68c18ee75af1afef7dc30d65d576c5' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-23T16:27:14+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0004s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','135e3418197f0ae5b8a885229933bb59','1516696034','1516696034') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2018-01-23T16:27:21+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=ere&add%5Buser_id%5D=121389&user_id=121388&token=135e3418197f0ae5b8a885229933bb59
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '135e3418197f0ae5b8a885229933bb59' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0005s ]
+SQL: INSERT INTO `ao_feedback` (`type`,`info`,`user_id`,`add_time`,`edit_time`) VALUES ('BUG','ere','121389','1516696041','1516696041') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2018-01-23T16:27:31+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=efe&add%5Buser_id%5D=121389&user_id=121388&token=135e3418197f0ae5b8a885229933bb59
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '135e3418197f0ae5b8a885229933bb59' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0005s ]
+SQL: INSERT INTO `ao_feedback` (`type`,`info`,`user_id`,`add_time`,`edit_time`) VALUES ('BUG','efe','121389','1516696051','1516696051') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2018-01-23T16:27:36+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=frfrfr&add%5Buser_id%5D=121389&user_id=121388&token=135e3418197f0ae5b8a885229933bb59
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '135e3418197f0ae5b8a885229933bb59' LIMIT 1   [ RunTime:0.0003s ]
+SQL: DELETE FROM `ao_token` WHERE `user_id` = '121388' [ RunTime:0.0002s ]
+
+[ 2018-01-23T16:50:40+08:00 ] 192.168.1.4 /server/home/apply/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+ERR: 无法加载控制器:Apply
+
+[ 2018-01-23T16:50:52+08:00 ] 192.168.1.4 /server/home/apply/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+ERR: 无法加载控制器:Apply
+
+[ 2018-01-23T16:52:35+08:00 ] 192.168.1.4 /server/home/apply/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+ERR: 无法加载控制器:Apply
+
+[ 2018-01-23T16:59:54+08:00 ] 192.168.1.4 /server/home/carry/examine
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+ERR: 无法加载控制器:Carry
+
+[ 2018-01-23T17:07:30+08:00 ] 192.168.1.4 /server/home/carry/profit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+ERR: 无法加载控制器:Carry
+
+[ 2018-01-23T17:15:18+08:00 ] 192.168.1.4 /server/home/carry/profit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+ERR: 无法加载控制器:Carry
+
+[ 2018-01-23T17:23:29+08:00 ] 192.168.1.4 /server/home/charge
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+ERR: 无法加载控制器:Charge
+
+[ 2018-01-23T17:24:23+08:00 ] 192.168.1.4 /server/home/charge
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+ERR: 无法加载控制器:Charge
+
+[ 2018-01-23T17:26:04+08:00 ] 192.168.1.4 /server/home/charge
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+ERR: 无法加载控制器:Charge
+
+[ 2018-01-23T17:46:06+08:00 ] 192.168.1.4 /server/home/get/pwd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+ERR: 无法加载控制器:Get
+
+[ 2018-01-23T17:46:11+08:00 ] 192.168.1.4 /server/home/get/pwd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+ERR: 无法加载控制器:Get
+
+[ 2018-01-23T17:51:24+08:00 ] 192.168.1.4 /server/home/get/pwd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+ERR: 无法加载控制器:Get
+
+[ 2018-01-23T17:53:15+08:00 ] 192.168.1.4 /server/home/get/pwd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+ERR: 无法加载控制器:Get
+
+[ 2018-01-23T17:54:47+08:00 ] 192.168.1.4 /server/home/get/pwd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+ERR: 无法加载控制器:Get
+
+[ 2018-01-23T18:24:36+08:00 ] 192.168.1.4 /server/home/reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+ERR: 无法加载控制器:Reg
+
+[ 2018-01-23T18:35:20+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=qqq&add%5Buser_id%5D=121389&user_id=121388&token=135e3418197f0ae5b8a885229933bb59
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '135e3418197f0ae5b8a885229933bb59' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-01-23T18:35:31+08:00 ] 192.168.1.4 /server/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::get() should be compatible with Think\Controller::get($name = '') D:\database\Project\working\company\aoAdmin\server\app\Home\Controller\IndexController.class.php 第 128 行.
+SQL: SHOW COLUMNS FROM `ao_user` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ao_user` WHERE `user_id` = '121388' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0005s ]
+SQL: REPLACE INTO `ao_token` (`user_id`,`token`,`add_time`,`edit_time`) VALUES ('121388','1bf17c7021a92607c6ac1cb94bf8c933','1516703731','1516703731') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000745s ]
+
+[ 2018-01-23T18:35:38+08:00 ] 192.168.1.4 /server/home/feedback/add?idType=auto&table=feedback&add%5Btype%5D=BUG&add%5Binfo%5D=aaa&add%5Buser_id%5D=121389&user_id=121388&token=1bf17c7021a92607c6ac1cb94bf8c933
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `ao_token` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ao_token` WHERE `user_id` = '121388' AND `token` = '1bf17c7021a92607c6ac1cb94bf8c933' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ao_feedback` [ RunTime:0.0006s ]
+SQL: INSERT INTO `ao_feedback` (`type`,`info`,`user_id`,`add_time`,`edit_time`) VALUES ('BUG','aaa','121389','1516703738','1516703738') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000861s ]
+

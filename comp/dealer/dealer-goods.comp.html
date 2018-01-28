@@ -1,0 +1,77 @@
+<!-- 经销商商品管理组件 -->
+<div class="dealer-goods-comp" style="padding-bottom:200px">
+    <el-card style="margin-bottom:20px;">
+        <div slot="header">
+            <span>商品列表</span>
+        </div>
+        <goods-list-comp :show-item='tableShowItem'>
+            <template slot='tool'>
+                <el-table-column label="操作" width='150' fixed='right' align='center'>
+                    <template slot-scope="scope">
+                        <el-button size="mini" @click="addGoods(scope.row,scope.$index)">指派给代理商</el-button>
+                    </template>
+                </el-table-column>
+            </template>
+        </goods-list-comp>
+
+    </el-card>
+
+    <el-card>
+
+        <div slot="header">
+            <span>已指派的商品</span>
+        </div>
+
+        <el-row style="margin-bottom: 10px">
+
+            <el-col :span='24'>
+                <!-- <el-button type="danger" icon="el-icon-delete" size='small' @click='batchDeleting()'>删除选中</el-button> -->
+                <el-button type="primary" icon="el-icon-refresh" size='small' @click='refresh();tool.isRefreshLoading=true;' :loading="tool.isRefreshLoading">刷新表格</el-button>
+                <div class="float-right">
+                    <el-input placeholder="搜索……" size='small' v-model="conf.table.key" clearable v-on:keyup.enter.native='search();'>
+                        <el-button slot="append" type="primary" icon="el-icon-search" size='small' @click='search()' :loading="tool.isSearchLoading">搜索</el-button>
+                    </el-input>
+                </div>
+            </el-col>
+        </el-row>
+
+        <table-comp ref='table' :conf.sync='conf'>
+
+            <el-table-column prop="goods_title" width='100' label="产品头像">
+                <template slot-scope="scope">
+                    <img :src="$getUrl(scope.row.head_img)" style="max-width: 100%" alt="">
+                </template>
+            </el-table-column>
+
+            <el-table-column prop="goods_title" width='auto' label="产品标题"></el-table-column>
+
+            <el-table-column prop="goods_title" width='200' label="费用">
+
+                <template slot-scope="scope">
+                    <el-input v-model="scope.row.money" @keyup.enter.native="editGoods(scope.row,scope.$index)" @blur="editGoods(scope.row,scope.$index)"
+                        placeholder="请输入金额"></el-input>
+                </template>
+
+            </el-table-column>
+            <el-table-column prop="add_time" width='200' label="添加时间"></el-table-column>
+
+            <el-table-column label="操作" width='100' fixed='right' align='center'>
+                <template slot-scope="scope">
+                    <!-- <el-button size="mini" @click="editGoods(scope.row,scope.$index)">改价</el-button> -->
+                    <el-button size="mini" :key='$getRand()' type="danger" @click.stop="del(scope.$index, scope.row)">删除</el-button>
+                </template>
+            </el-table-column>
+
+        </table-comp>
+
+
+
+    </el-card>
+
+    <!-- 编辑商品信息 -->
+
+
+    <!-- <goods-add-comp @cancel='cancel' @on-success='saveSuccess' type='save' ref='editGoods' :item.sync='edit.item' v-show='edit.isShow'></goods-add-comp> -->
+
+
+</div>

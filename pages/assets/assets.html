@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>素材管理</title>
+    <script src='../../utils/request/request.js'></script>
+
+</head>
+
+<body>
+
+    <div id="pageApp">
+
+        <nav-comp>
+
+            <el-container>
+
+                <el-aside>
+                    <el-menu default-active='0' style="width:150px" class="el-menu-vertical-left">
+
+                        <el-menu-item index="0" @click='refresh(false)'>
+                            <i class="el-icon-picture-outline"></i>
+                            <span slot="title">所有素材</span>
+                        </el-menu-item>
+
+                        <el-menu-item index="1" @click='refresh(0,"img")'>
+                            <i class="el-icon-picture-outline"></i>
+                            <span slot="title">图片</span>
+                        </el-menu-item>
+                        <el-menu-item index="2" @click='refresh(0,"video")'>
+                            <i class="fa fa-video-camera"></i>
+                            <span slot="title">视频</span>
+                        </el-menu-item>
+                        <el-menu-item index="3" @click='refresh(0,"audio")'>
+                            <i class="fa fa-volume-down"></i>
+                            <span slot="title">音频</span>
+                        </el-menu-item>
+                        <el-menu-item index="4" @click='refresh(1,"")'>
+                            <i class="el-icon-delete"></i>
+                            <span slot="title">回收站</span>
+                        </el-menu-item>
+                    </el-menu>
+
+                </el-aside>
+
+                <el-main>
+
+                    <div class="content padding-10">
+                        <el-row>
+                            <el-col :span='20' class="margin-bottom-20">
+                                <el-button-group>
+                                    <el-button type="primary" icon="el-icon-plus" size='small' @click='dialog.upload.img.isShow=true'>新增图片素材</el-button>
+                                    <el-button type="primary" icon="el-icon-plus" size='small' @click='dialog.upload.video.isShow=true'>新增视频素材</el-button>
+                                    <el-button type="primary" icon="el-icon-plus" size='small' @click='dialog.upload.audio.isShow=true'>新增音频素材</el-button>
+                                </el-button-group>
+
+                                <el-button type="danger" icon="el-icon-delete" size='small' @click='dels()'>删除选中</el-button>
+                                <el-button type="primary" icon="el-icon-refresh" size='small' @click='refresh()'>刷新</el-button>
+                            </el-col>
+
+                            <el-col :span='4'>
+                                <div class="text-right">
+
+                                    总大小：
+                                    <el-tag size='small'>{{assets.size}} </e l-tag> MB
+                                </div>
+                            </el-col>
+                        </el-row>
+
+                        <el-row class="assets-list" :gutter="20" v-loading='assets.loading'>
+                            <el-col :lg='3' :md='6' :sm='12' v-for='(item,index) in assets.list' :key='item.assets_id'>
+                                <el-card class="item" :body-style="{ padding: '0px' }">
+
+                                    <div class="img" :style="[{backgroundImage:'url('+getImg(index,item)+')'}]" @click='setActive(index,item,assets.list)'>
+                                        <img :src="getImg(index,item)" v-if='item.type=="img"' class="hide" @error='item.isLoading=false;item.isError=true'>
+
+                                        <div class="error" v-if='item.isError'>
+                                            <div class="error-content">
+                                                <i class="el-icon-close"></i>
+                                                <div class="info">找不到图片</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="active" v-if='item.isActive'>
+                                            <i class="el-icon-check"></i>
+                                        </div>
+
+                                        <div :class="['type',{'type-lg':item.type!='img'}]">
+                                            <i class="el-icon-picture-outline" v-if='item.type == "img"'></i>
+                                            <i class="fa fa-video-camera" v-if='item.type == "video"'></i>
+                                            <i class="fa fa-volume-down" v-if='item.type == "audio"'></i>
+                                        </div>
+
+                                        <div class="name">
+                                            <div class="name">{{item.name}}</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bottom clearfix hide">
+
+                                        <!-- <div class="name">{{item.name}}</div> -->
+                                        <div class="text-muted" style="font-size:13px;">
+                                            <!-- <div style="padding:10px 0;">上传时间：</div> -->
+                                            <!-- <div>{{item.add_time}}</div> -->
+                                        </div>
+
+                                    </div>
+                                    <div class="footer">
+                                        <el-button type="text" class="button" @click='show(index,item,assets.list)'>查看</el-button>
+                                        <el-button type="text" class="button" @click='del(index,item,assets.list)'>删除</el-button>
+                                        <el-button type="text" class="button" @click='removeRecycle(index,item,assets.list)' v-if='item.is_recycle == 1'>还原</el-button>
+                                    </div>
+                                </el-card>
+                            </el-col>
+                        </el-row>
+                        <el-row>
+                            <el-col :span='24'>
+
+                                <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="page.indexPage" :page-sizes="page.sizes"
+                                    :page-size="page.size" layout="total, sizes, prev, pager, next, jumper" :total="page.total">
+                                </el-pagination>
+
+                            </el-col>
+                        </el-row>
+                    </div>
+                </el-main>
+            </el-container>
+        </nav-comp>
+
+
+        <el-dialog :title="dialog.file.title" top='10px' width='60%' :visible.sync="dialog.file.isShow">
+
+            <el-form label-width="100px">
+
+                <el-form-item label='文件地址：'>
+                    <el-input :value="getImg(0,dialog.file.item_)"></el-input>
+                </el-form-item>
+
+                <el-form-item label='文件名：'>
+                    <el-input v-model="dialog.file.item_.name" placeholder="请输入文件名"></el-input>
+                </el-form-item>
+
+                <el-form-item label='文件类型：'>
+
+                    <el-radio v-model="dialog.file.item_.type" label="2">备选项</el-radio>
+                    <el-radio v-model="dialog.file.item_.type" label="2">备选项</el-radio>
+
+                </el-form-item>
+
+                <el-form-item label='文件大小：'>
+                    {{dialog.file.item_.size}} MB
+                </el-form-item>
+                <el-form-item label='上传时间：'>
+                    {{dialog.file.item_.add_time}}
+                </el-form-item>
+
+                <el-form-item>
+
+                    <el-button size='small' type="primary" @click='save(dialog.file.index,dialog.file.item,dialog.file.item_,dialog.file)'>保存修改</el-button>
+                    <el-button size='small' type="danger" @click='del(dialog.file.index,dialog.file.item,assets.list,dialog.file)'>删除此文件</el-button>
+
+                </el-form-item>
+
+            </el-form>
+
+            <video width="320" height="240" :src='getUrl(dialog.file.item.url)' preload='auto' v-show='dialog.file.item.type == "video"'
+                controls></video>
+            <audio width="320" height="240" :src='getUrl(dialog.file.item.url)' v-show='dialog.file.item.type == "audio"' controls></audio>
+
+            <img :src="getImg(dialog.file.index,dialog.file.item_)" class="image center-block" v-show='dialog.file.item.type == "img"'>
+
+
+        </el-dialog>
+
+        <el-dialog :title="dialog.upload.img.title" :file-list="dialog.upload.img.list" :visible.sync="dialog.upload.img.isShow">
+
+            <el-upload ref="uploadImg" :on-success='uploadSuccess' list-type="picture" :accept='dialog.upload.img.accept' multiple='true'
+                :data='dialog.upload.img.data' :action="dialog.upload.url" :auto-upload="false">
+                <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+                <el-button style="margin-left: 10px;" size="small" type="success" @click="upload('img','uploadImg')">上传到服务器</el-button>
+                <div slot="tip" class="el-upload__tip">文件大小不超过500kb</div>
+            </el-upload>
+
+        </el-dialog>
+
+        <el-dialog :title="dialog.upload.video.title" :file-list="dialog.upload.video.list" :visible.sync="dialog.upload.video.isShow">
+
+            <el-upload ref="uploadVideo" :on-success='uploadSuccess' list-type="picture" :accept='dialog.upload.video.accept' multiple='true'
+                :data='dialog.upload.video.data' :action="dialog.upload.url" :auto-upload="false">
+                <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+                <el-button style="margin-left: 10px;" size="small" type="success" @click="upload('video','uploadVideo')">上传到服务器</el-button>
+                <div slot="tip" class="el-upload__tip">文件大小不超过500kb</div>
+            </el-upload>
+
+        </el-dialog>
+
+        <el-dialog :title="dialog.upload.audio.title" :file-list="dialog.upload.audio.list" :visible.sync="dialog.upload.audio.isShow">
+
+            <el-upload ref="uploadAudio" :on-success='uploadSuccess' list-type="picture" :accept='dialog.upload.audio.accept' multiple='true'
+                :data='dialog.upload.audio.data' :action="dialog.upload.url" :auto-upload="false">
+                <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+                <el-button style="margin-left: 10px;" size="small" type="success" @click="upload('audio','uploadAudio')">上传到服务器</el-button>
+                <div slot="tip" class="el-upload__tip">文件大小不超过500kb</div>
+            </el-upload>
+
+        </el-dialog>
+
+
+
+    </div>
+</body>
+
+</html>

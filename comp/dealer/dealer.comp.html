@@ -1,0 +1,37 @@
+<div class="dealer-comp">
+
+
+    <el-card style="margin-bottom: 20px">
+        <div slot="header">
+            <span>{{title}}</span>
+        </div>
+
+
+        <el-form ref="dealerForm" :model="dealer.data" label-width="auto">
+            <p v-if='dealer.data.user_id!=null'>
+                ID: {{dealer.data.user_id}}
+            </p>
+
+            <el-form-item label="经销商名">
+                <el-input v-model="dealer.data.user_name"></el-input>
+            </el-form-item>
+            <el-form-item label="经销商手机号">
+                <el-input v-model="dealer.data.user_phone"></el-input>
+            </el-form-item>
+
+            <el-form-item>
+                <el-button type="primary" @click="onSubmit">保存用户信息</el-button>
+                <el-button @click='cancel'>关闭</el-button>
+            </el-form-item>
+        </el-form>
+
+    </el-card>
+
+    <el-button @click='goods.isShow=!goods.isShow' v-if='type == "edit"'>管理商品</el-button>
+    <!-- 商品管理 -->
+
+    <dealer-goods-comp style="margin-top:20px;" v-if='type == "edit" && goods.isShow == true ' ref='dealer-goods' :user-info.sync='dealer.data'></dealer-goods-comp>
+
+
+
+</div>

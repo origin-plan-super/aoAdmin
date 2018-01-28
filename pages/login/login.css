@@ -1,0 +1,61 @@
+.login-box {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+  .login-box .login-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-image: url(../../assets/login/img/5.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(10px);
+            filter: blur(10px); }
+  .login-box .login-form {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    width: 450px;
+    height: 100vh;
+    -webkit-box-shadow: 0 5px 30px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 30px 1px rgba(0, 0, 0, 0.3); }
+    .login-box .login-form .login-form-box {
+      position: absolute;
+      width: 100%;
+      height: 300px;
+      top: 40%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+      .login-box .login-form .login-form-box .code {
+        display: block;
+        max-width: 100%;
+        background-color: #dddddd;
+        height: 100%;
+        height: 40px;
+        cursor: pointer; }
+      .login-box .login-form .login-form-box .login-app-name {
+        font-size: 13px;
+        color: #777;
+        padding: 10px 0; }
+
+.login-enter-active,
+.login-leave-active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.login-enter,
+.login-leave-to {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px); }
+
+.el-row {
+  padding: 0 60px; }

@@ -1,0 +1,33 @@
+<div class="file-list-comp" v-loading='loading'>
+
+
+    <el-row :gutter="10" style="margin-bottom: 10px;">
+
+        <el-col :lg='3' :md='4' :sm='6' v-for='(item,index) in list'>
+            <div class="img-list-item" :style="[{backgroundImage:'url('+getUrl(index,item,item.url)+')'}]" @click='setActive(index,item,list)'>
+                <img :src="getUrl(index,item,item.url)" class="hide" @error='item.isLoading=false;item.isError=true'>
+                <div class="error" v-if='item.isError'>
+                    <div class="error-content">
+                        <div class="info">图片错误！</div>
+                    </div>
+                </div>
+
+                <div class="active" v-if='item.isActive'>
+                    <i class="el-icon-check"></i>
+                </div>
+            </div>
+        </el-col>
+        {{init}}
+    </el-row>
+
+    <el-row>
+        <el-col :span='24'>
+            <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="page.indexPage" :page-sizes="page.sizes"
+                :page-size="page.size" layout="total, sizes, prev, pager, next, jumper" :total="page.total">
+            </el-pagination>
+
+        </el-col>
+    </el-row>
+
+
+</div>

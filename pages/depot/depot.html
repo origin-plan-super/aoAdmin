@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>仓储管理</title>
+    <script src='../../utils/request/request.js'></script>
+
+</head>
+
+<body>
+
+    <div id="pageApp">
+
+        <nav-comp>
+
+            <el-container>
+
+                <el-main>
+                    <div class="content padding-10">
+
+                        <depot-list-comp @edit='editDepot' @add='addDepot' ref='depotList' v-show='list.isShow'></depot-list-comp>
+                        <depot-comp @cancel='cancel' title='新增仓库' v-if='add.isShow' @on-success='addSuccess'></depot-comp>
+                        <depot-comp @cancel='cancel' title='编辑仓库信息' v-if='edit.isShow' type='edit' ref='editDepot' @on-success='editSuccess'></depot-comp>
+
+                    </div>
+                </el-main>
+            </el-container>
+
+        </nav-comp>
+
+    </div>
+
+
+
+</body>
+
+</html>

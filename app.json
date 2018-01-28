@@ -1,0 +1,55 @@
+{
+    "debug": true,
+    "indexPage": "pages/index/index",
+    "request": [
+        "../../utils/element/theme-chalk/index.css",
+        "../../utils/font/css/font-awesome.min.css",
+        "../../utils/app/app.css",
+        "../../utils/vue/vue.min.js",
+        "../../utils/element/index.js",
+        "../../comp/comp.js",
+        "../../utils/app/app.js"
+    ],
+    "nav": [
+        {
+            "title": "首页",
+            "id": "index",
+            "icon": "el-icon-menu"
+        },
+        {
+            "title": "经销商管理",
+            "id": "dealer",
+            "icon": "fa fa-user-o"
+        },
+        {
+            "title": "订单管理",
+            "id": "order",
+            "icon": "el-icon-tickets"
+        },
+        {
+            "title": "产品管理",
+            "id": "goods",
+            "icon": "el-icon-goods"
+        },
+        {
+            "title": "仓储管理",
+            "id": "depot",
+            "icon": "fa fa-cube"
+        },
+        {
+            "title": "消息管理",
+            "id": "paper",
+            "icon": "el-icon-message"
+        },
+        {
+            "title": "素材管理",
+            "id": "assets",
+            "icon": "el-icon-picture-outline"
+        },
+        {
+            "title": "反馈管理",
+            "id": "feedback-list",
+            "icon": "el-icon-service"
+        }
+    ]
+}

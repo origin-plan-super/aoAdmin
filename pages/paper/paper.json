@@ -1,0 +1,7 @@
+{
+    "request": [
+        "../../utils/bootstrap/js/bootstrap.min.js",
+        "../../utils/summernote/summernote.min.js",
+        "../../utils/summernote/summernote.css"
+    ]
+}

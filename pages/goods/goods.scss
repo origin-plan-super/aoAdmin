@@ -1,0 +1,37 @@
+.goods-add {
+    padding-bottom: 200px;
+    .head-img {
+        max-width: 300px;
+        border-radius: 4px;
+        margin: 10px 0;
+    }
+    .item-img {
+        display: block;
+        max-width: 300px;
+        border-radius: 4px;
+        margin: 10px 0;
+    }
+}
+
+.spec-list {
+    .spec-item {
+        display: inline-block;
+        margin-right: 10px;
+        .input-new-tag {
+            display: inline-block;
+            width: 90px;
+        }
+        .o-close {
+            &:hover {
+                color: #F56C6C;
+            }
+        }
+    }
+    .add-spec {
+        display: inline-block;
+    }
+}
+
+.group {
+    margin-bottom: 20px;
+}

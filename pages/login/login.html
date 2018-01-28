@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <script src='../../utils/request/request.js'></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../../utils/font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../app.css">
+    <link rel="stylesheet" href="login.css"> -->
+
+</head>
+
+<body>
+
+    <div id="pageApp">
+
+        <div class="login-box">
+            <div class="login-bg">
+                <div class="login-mask"></div>
+            </div>
+            <transition name='login'>
+                <div class="login-form" v-if='isShowLoginForm'>
+
+                    <div class="login-form-box">
+                        <el-form :rules="rules" :model="adminInfo" ref="ruleForm" class="demo-ruleForm">
+
+                            <el-row>
+                                <el-col :span="24">
+                                    <div class="login-title">后台登录</div>
+                                    <div class="login-app-name">{{appName}}</div>
+                                </el-col>
+                            </el-row>
+
+                            <el-row>
+                                <el-col :span="24">
+                                    <el-form-item prop="admin_id">
+                                        <el-input placeholder="请输入用户名" v-model='adminInfo.admin_id'></el-input>
+                                    </el-form-item>
+                                </el-col>
+                            </el-row>
+
+
+                            <el-row>
+                                <el-col :span="24">
+                                    <el-form-item prop="admin_pwd">
+                                        <el-input type='password' placeholder="请输入密码" v-model='adminInfo.admin_pwd'></el-input>
+                                    </el-form-item>
+                                </el-col>
+                            </el-row>
+
+
+                            <el-row gutter='20'>
+                                <el-col :span="14">
+                                    <el-form-item prop="admin_code">
+                                        <el-input type='text' placeholder="请输入验证码" v-model='adminInfo.admin_code'></el-input>
+                                    </el-form-item>
+                                </el-col>
+                                <el-col :span="10">
+                                    <img :src="code" @click='getCode()' class="code" alt="">
+                                </el-col>
+                            </el-row>
+
+                            <el-row>
+                                <el-col :span="24">
+
+                                    <el-form-item prop="admin_code">
+                                        <el-button type="primary" @click="onSubmit('ruleForm')">登录</el-button>
+                                    </el-form-item>
+                                </el-col>
+                            </el-row>
+
+                            <el-row>
+                                <el-col :span='24'>
+
+                                    <el-alert v-show='isShowAlert' :title="alertInfo" :closable='alertClosable' :type="alertType" show-icon>
+                                    </el-alert>
+
+                                </el-col>
+                            </el-row>
+
+                        </el-form>
+
+                    </div>
+
+                </div>
+            </transition>
+
+        </div>
+
+        <el-button @click="visible = true">按钮</el-button>
+        <el-dialog :visible.sync="visible" title="Hello world">
+            <p>欢迎使用 Element</p>
+        </el-dialog>
+
+    </div>
+
+
+
+    <!-- <script src='../../utils/jquery/jquery.min.js'></script>
+    <script src='../../utils/vue/vue.min.js'></script>
+    <script src='https://unpkg.com/element-ui/lib/index.js'></script>
+    <script src='../../utils/app/app.js'></script>
+    <script src='login.js'></script> -->
+
+
+</body>
+
+</html>

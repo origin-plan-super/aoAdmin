@@ -1,0 +1,11 @@
+<div>
+    {{init}}
+    <el-table @filter-change='changeFilter' :data="data" max-height='conf.table.maxHeight' v-loading="conf.table.loading" @selection-change="handleSelectionChange">
+        <slot></slot>
+    </el-table>
+
+    <el-pagination :class="{'disabled':conf.page.disabled}" @size-change="changeSize" @current-change="changeCurrent" :current-page="conf.page.currentPage"
+        :page-sizes="conf.page.pageSizes" :page-size="conf.page.pageSize" layout="total, sizes, prev, pager, next, jumper" :total="conf.page.total">
+    </el-pagination>
+
+</div>

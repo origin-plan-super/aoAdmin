@@ -1,0 +1,7 @@
+.content-table {
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  right: 0;
+  left: 0;
+  overflow: auto; }

@@ -1,0 +1,50 @@
+.el-header {
+  line-height: 60px !important;
+  height: 60px !important;
+  padding: 0; }
+
+.el-menu--horizontal {
+  line-height: 60px !important;
+  height: 60px !important; }
+
+.el-footer {
+  background-color: #fff;
+  line-height: 60px;
+  padding: 0;
+  border-top: solid 1px #ddd; }
+
+.el-container {
+  height: 100vh; }
+
+.iframe {
+  width: 100%;
+  height: 100%; }
+
+.el-main {
+  position: relative;
+  padding: 0;
+  overflow: hidden; }
+
+.el-aside {
+  width: auto !important; }
+
+.el-menu--collapse {
+  height: 100%; }
+
+.el-menu-vertical-left:not(.el-menu--collapse) {
+  width: 244px;
+  height: 100%;
+  top: 0;
+  bottom: 0; }
+
+.collapse {
+  position: relative;
+  width: 100%;
+  line-height: 60px;
+  height: 60px;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: center;
+  color: #ddd;
+  border-bottom: solid 1px #ddd;
+  font-size: 20px; }

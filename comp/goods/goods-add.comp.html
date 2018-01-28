@@ -1,0 +1,155 @@
+<div class="goods-add">
+
+    <!-- <el-upload class="goods-add-upload-img" :action="upload.head_img.action" :on-success='onSuccess' :multiple='upload.head_img.multiple'
+        :limit="upload.head_img.limit" :file-list="upload.head_img.fileList">
+        <el-button size="small" type="primary">点击上传</el-button>
+</el-upload> -->
+
+    <!-- 产品头像 -->
+    <!-- 产品头像选择器 -->
+
+    <el-form ref="form" :model="add.data" label-width="80px">
+
+        <el-form-item>
+            <el-button type="primary" @click="saveGoods">保存</el-button>
+            <el-button @click="cancel">取消</el-button>
+        </el-form-item>
+
+        <el-row>
+            <el-col :lg='12' :md='24'>
+
+                <el-form-item label="产品标题" :prop='add.data.goods_title'>
+                    <el-input v-model="add.data.goods_title" placeholder='产品标题'>
+                    </el-input>
+                </el-form-item>
+
+                <el-form-item label="产品数量" :prop='add.data.goods_count'>
+                    <el-input v-model="add.data.goods_count" placeholder='产品数量'>
+                    </el-input>
+                </el-form-item>
+
+                <el-form-item label="基本费用" :prop='add.data.money'>
+                    <el-input v-model="add.data.money" placeholder='基本费用'>
+                    </el-input>
+                </el-form-item>
+
+                <el-form-item label="订货上限" :prop='add.data.max'>
+                    <el-input v-model="add.data.max" placeholder='订货上限'>
+                    </el-input>
+                </el-form-item>
+                <el-form-item label="产品头像" :prop='head_img.url'>
+
+                    <el-input type='text' placeholder="请输入一个url地址或点击选择" v-model="head_img.url">
+                        <template slot="prepend">http://</template>
+                        <el-button @click='selectImg(head_img,btn.selectHeadImg)' slot="append">{{btn.selectHeadImg.title}}</el-button>
+                    </el-input>
+                    <img class="head-img" v-if='head_img.url != ""' :src="getUrl(head_img.url)">
+
+                </el-form-item>
+
+            </el-col>
+        </el-row>
+
+        <el-row>
+            <el-col :span='24'>
+                <file-list-comp :server='false' :activefile.sync='head_img.url' v-show='head_img.is_select'></file-list-comp>
+            </el-col>
+        </el-row>
+
+        <el-form-item label="产品仓库">
+            <el-autocomplete v-model="add.data.depot.depot_name" :fetch-suggestions="querySearchAsync" placeholder="请输入仓库名或者编号" @select="handleSelect"></el-autocomplete>
+            仓库ID：{{add.data.depot.depot_id}}
+        </el-form-item>
+
+        <el-form-item label="产品配图">
+            <el-button @click="btn.imglistSelect.is=!btn.imglistSelect.is;setTitle(btn.imglistSelect,btn.imglistSelect.is)">
+                {{btn.imglistSelect.title}}
+            </el-button>
+        </el-form-item>
+
+        <el-card class="group" v-if='btn.imglistSelect.is'>
+
+            <template v-for='(item,index) in add.data.imglist'>
+
+                <el-row>
+
+                    <el-col :lg='17' :md='24'>
+                        <el-form-item size='small' label-width="auto" :label="'产品配图'+(index+1)">
+
+                            <el-input type='text' placeholder="请输入一个url地址或点击选择" v-model="item.url" style="width:60%">
+                                <template slot="prepend">http://</template>
+                                <el-button @click='selectImg(item,item.btn)' slot="append">{{item.btn.title}}</el-button>
+                            </el-input>
+                            <el-button type='danger' icon="el-icon-close" v-if='index != 0' @click.prevent="remove(item,index,add.data.imglist)"></el-button>
+
+                        </el-form-item>
+                    </el-col>
+
+                </el-row>
+
+                <el-form-item size='small' label-width="80px">
+                    <img class="item-img" :src="getUrl(item.url)" v-if='item.url!==""'>
+                </el-form-item>
+
+
+                <el-row>
+                    <el-col :span='24'>
+                        <file-list-comp :server='false' :activefile.sync='item.url' v-show='item.is_select'></file-list-comp>
+                    </el-col>
+                </el-row>
+
+            </template>
+
+            <el-form-item>
+                <el-button @click="addFormItem">新增产品配图</el-button>
+            </el-form-item>
+
+        </el-card>
+
+        <el-form-item label="产品规格">
+            <el-button @click="btn.spec.is=!btn.spec.is;setTitle(btn.spec,btn.spec.is)">
+                {{btn.spec.title}}
+            </el-button>
+        </el-form-item>
+
+        <el-card v-show='btn.spec.is' class="group">
+            <!--  -->
+            <el-form-item label="产品规格">
+                <div class="spec-list">
+                    <div class="text-muted">
+                        点击标签可编辑产品规格，点击添加按钮可添加一个产品规格
+                    </div>
+                    <div class="spec-item" v-for='(item,index) in add.data.spec'>
+
+                        <el-input class="input-new-tag" v-show-focus='item.isEdit' :ref="'input_' + index" v-model='item.text' v-if="item.isEdit"
+                            size="mini" @keyup.enter.native="editSpec(item,index)" @blur="editSpec(item,index)">
+                        </el-input>
+
+                        <el-button size="mini" v-if='!item.isEdit' @click='showSpecEdit(item,index)'>{{item.text}}
+                            <i class="o-close el-icon-close el-icon--right" @click='remove(item,index, add.data.spec)'></i>
+                        </el-button>
+
+                    </div>
+                    <div class="add-spec">
+                        <el-button size="mini" @click='addSpec()'>添加
+                        </el-button>
+                    </div>
+                </div>
+
+
+            </el-form-item>
+
+        </el-card>
+
+
+        <el-form-item label="产品详情">
+            <div v-summernote='{value:add.data.goods_info,name:type+"sum"}'></div>
+        </el-form-item>
+
+
+    </el-form>
+
+
+
+
+</div>

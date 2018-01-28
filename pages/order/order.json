@@ -1,0 +1,6 @@
+{
+    "request": [
+        "../../comp/order-list/order-list.comp.js",
+        "../../comp/order/order.comp.js"
+    ]
+}
