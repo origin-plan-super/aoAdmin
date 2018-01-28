@@ -1187,11 +1187,20 @@ function regPlugin() {
         }
         //取得一个地址
         Vue.prototype.$getUrl = function (url) {
+
+            //取出index.php
+
+            var _url
+
+
             if (url.indexOf('http') == -1) {
-                return serverRoot + url;
+                _url = serverRoot + url;
             } else {
-                return url;
+                _url = url;
             }
+
+            _url = _url.replace('index.php/');
+            return _url;
         }
     };
     Vue.use(MyPlugin);

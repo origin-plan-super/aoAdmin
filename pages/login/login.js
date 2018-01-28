@@ -54,7 +54,6 @@ pages({
                     $.post(serverRootAdmin + 'index/login', _this.adminInfo, function (res) {
 
                         res = JSON.parse(res);
-                        console.log(res);
                         _this.isShowAlert = true;
 
                         if (res.res == 1) {
@@ -62,7 +61,7 @@ pages({
                             _this.alertType = 'success';
                             _this.alertInfo = '登录成功~正在为您跳转';
                             setTimeout(function () {
-                                window.location.href = '../../pages/index/index.html';
+                                window.location.href = '../../pages/goods/goods.html';
                             }, 500);
 
                         }

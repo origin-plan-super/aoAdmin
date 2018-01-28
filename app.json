@@ -11,11 +11,7 @@
         "../../utils/app/app.js"
     ],
     "nav": [
-        {
-            "title": "首页",
-            "id": "index",
-            "icon": "el-icon-menu"
-        },
+   
         {
             "title": "经销商管理",
             "id": "dealer",

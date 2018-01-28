@@ -3,7 +3,11 @@ initGlobalVariable();
 
 //初始化一些全局变量
 function initGlobalVariable(conf, fun) {
-
+    // {
+    //     "title": "首页",
+    //     "id": "index",
+    //     "icon": "el-icon-menu"
+    // },
 
     //服务器地址===================================
     window.serverRoot = 'http://' + window.location.host + '/server/index.php/';
