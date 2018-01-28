@@ -8,9 +8,9 @@ pages({
         appName: "澳洲物流",
         code: '',
         adminInfo: {
-            admin_id: 'root',
-            admin_pwd: '123',
-            admin_code: '1111',
+            admin_id: '',
+            admin_pwd: '',
+            admin_code: '',
         },
         rules: {
             admin_id: [
