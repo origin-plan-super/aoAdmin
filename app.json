@@ -1,6 +1,6 @@
 {
     "debug": true,
-    "indexPage": "pages/index/index",
+    "indexPage": "pages/goods/goods",
     "request": [
         "../../utils/element/theme-chalk/index.css",
         "../../utils/font/css/font-awesome.min.css",
@@ -11,7 +11,6 @@
         "../../utils/app/app.js"
     ],
     "nav": [
-   
         {
             "title": "经销商管理",
             "id": "dealer",
