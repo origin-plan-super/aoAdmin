@@ -1199,7 +1199,7 @@ function regPlugin() {
                 _url = url;
             }
 
-            _url = _url.replace('index.php/');
+            _url = _url.replace('index.php/', '');
             return _url;
         }
     };
