@@ -6,7 +6,7 @@ function initGlobalVariable(conf, fun) {
 
 
     //服务器地址===================================
-    window.serverRoot = 'http://' + window.location.host + '/server/';
+    window.serverRoot = 'http://' + window.location.host + '/server/index.php';
 
     //服务器home分组地址===================================
     window.serverRootHome = serverRoot + 'home/';
