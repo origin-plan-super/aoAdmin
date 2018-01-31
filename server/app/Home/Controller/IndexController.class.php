@@ -69,6 +69,7 @@ class IndexController extends Controller {
                 $res['user_id']=$user_id;
                 $res['userInfo']=[];
                 $res['userInfo']['user_name']=$result['user_name'];
+                $res['userInfo']['user_phone']=$result['user_phone'];
             }else{
                 //添加token的时候失败
                 $res['res']=-2;

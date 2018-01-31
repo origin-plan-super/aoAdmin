@@ -32,11 +32,8 @@ function toHtml($arr,$field){
     
 }
 
-
 function html($arr){
-    
     return htmlspecialchars_decode($arr);
-    
 }
 
 
@@ -522,4 +519,56 @@ function delFile($path, $delDir = false) {
         }
     }
     clearstatcache();
+}
+/**
+* 让商品数量减少
+* 2018年1月29日17:52:05
+*/
+function decGoods($orderListId){
+    
+    //让商品数量减少
+    // $ids[0]='201801291348504982';
+    $where['order_id']=array('in',$orderListId);
+    $model=M('order_info');
+    $result=$model->where($where)->select();
+    $goodsList=[];
+    foreach ($result as $key => $value) {
+        $order_info=$value['order_info'];
+        $order_info=html($order_info);
+        $order_info=json_decode($order_info,true);
+        foreach ($order_info['goods_info'] as $j => $v) {
+            $goodsList[]=$v;
+        }
+    }
+    //找商品
+    $model=M('goods');
+    foreach ($goodsList as $key => $value) {
+        $where=[];
+        $where['goods_id']=$value['goods_id'];
+        $num=$value['num'];
+        $model->where($where)->setDec('goods_count',3);
+    }
+    
+}
+
+//获得订单详细信息，返回的是json型数据
+
+function getOrderInfo($order_id){
+    $model=M('order_info');
+    $where=[];
+    $where['order_id']=$order_id;
+    $result= $model->where($where)->find();
+    $orderInfo=$result['order_info'];
+    $orderInfo=html($orderInfo);
+    $orderInfo=json_decode($orderInfo,true);
+    return $orderInfo;
+}
+
+//获得一个订单的总价
+function getOrderMoney($orderInfo){
+    $money=0;
+    foreach ($orderInfo['goods_info'] as $key => $value) {
+        $money+=($value['money']*$value['num']);
+    }
+    return $money;
 }

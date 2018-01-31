@@ -81,7 +81,8 @@ Vue.component('img-list-comp', function (resolve, reject) {
                     this.refresh();
                 },
                 getImg: function (index, item, img) {
-
+                    console.error('请使用$getUrl！', index, item);
+                    return;
                     if (img.indexOf('http') == -1) {
                         return serverRoot + img;
                     } else {
@@ -98,7 +99,7 @@ Vue.component('img-list-comp', function (resolve, reject) {
 
                     item.isActive = true;
 
-                    this.activeimg = this.getImg(null, null, item.url);
+                    this.activeimg = this.$getUrl(item.url);
 
                     this.$emit('update:activeimg', this.activeimg);
 
@@ -481,14 +482,13 @@ pages({
 
         },
         getImg: function (index, item, img) {
-
+            console.error('请使用$getUrl！', index, item);
+            return;
             if (img.indexOf('http') == -1) {
                 return serverRoot + img;
             } else {
                 return img;
             }
-
-
         },
 
         push: function (item, index) {

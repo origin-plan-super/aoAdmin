@@ -24,25 +24,101 @@
         <el-table-column type='selection' v-if='getShowItem("select")'></el-table-column>
         <el-table-column prop="order_id" width='auto' label="订单号"></el-table-column>
         <el-table-column prop="user_id" width='auto' label="用户ID"></el-table-column>
+
         <el-table-column prop="state" width='auto' label="订单状态" :filters="stateListValidate" :filter-method="filterTag">
 
             <template slot-scope="scope">
-                <el-tag :type='getState(scope.row).type'>{{getState(scope.row).text}}</el-tag>
+                <el-tag :type='getState(scope.row).type' v-if='scope.row.state!=1'>{{getState(scope.row).text}}</el-tag>
+                <div v-if='scope.row.state==1' class="text-muted">等待用户付款</div>
+                <!-- 几种状态的按钮 -->
+                <el-button v-if='scope.row.state==2' @click='deliverGoods(scope.row,scope.$index)' size="small">发货</el-button>
             </template>
 
         </el-table-column>
+
+        <el-table-column prop="money" width='auto' label="订单总价￥">
+
+            <template slot-scope="scope">
+                <span>
+                    {{scope.row.money}}
+                </span>
+            </template>
+
+        </el-table-column>
+
         <el-table-column prop="add_time" width='auto' label="创建时间"></el-table-column>
         <el-table-column prop="edit_time" width='auto' label="最后修改时间"></el-table-column>
 
-
         <el-table-column label="操作" width='180' fixed='right' v-if='getShowItem("tool")' align='center'>
             <template slot-scope="scope">
-                <el-button size="mini" @click="show(scope.$index, scope.row)">查看</el-button>
+                <el-button size="mini" @click="show(scope.row,scope.$index)">查看</el-button>
                 <el-button size="mini" :key='$getRand()' type="danger" @click.stop="del(scope.$index, scope.row)">删除</el-button>
             </template>
         </el-table-column>
 
     </table-comp>
+
+
+    <el-dialog title="订单详情" :visible.sync="isShowInfo" top='5vh' width="80%">
+        <template v-if='order.order_info != null'>
+            <div>
+
+                <el-row>
+                    <el-col :span='2'> 订单号：</el-col>
+                    <el-col :span='20'> {{order.order_id}}</el-col>
+                </el-row>
+
+                <el-row>
+                    <el-col :span='2'> 物流号：</el-col>
+                    <el-col :span='20'>
+                        <span v-if='order.order_info.courier_nmumber!=null'>
+                            {{order.order_info.courier_nmumber}}
+                        </span>
+                        <span v-else>
+                            <span class="text-danger">
+                                未发货！
+                            </span>
+                        </span>
+                    </el-col>
+                </el-row>
+
+                <el-row>
+                    <el-col :span='2'> 收货信息：</el-col>
+                    <el-col :span='20'> {{order.order_id}}</el-col>
+                </el-row>
+
+                <el-row>
+                    <el-col :span='2'> 订单总价：</el-col>
+                    <el-col :span='20'> {{order.money}}￥</el-col>
+                </el-row>
+                <hr>
+                <div class="h3">商品列表</div>
+                <el-row>
+                    <el-col :span='24'>
+
+                        <el-table :data="order.order_info.goods_info" style="width: 100%">
+
+                            <el-table-column prop="goods_id" width='100' label="产品id"></el-table-column>
+                            <el-table-column prop="head_img" width='100' label="产品头像">
+                                <template slot-scope="scope">
+                                    <img :src="$getUrl(scope.row.head_img)" style="max-width: 100%" alt="">
+                                </template>
+                            </el-table-column>
+                            <el-table-column prop="goods_title" label="产品标题"></el-table-column>
+                            <el-table-column prop="money" width='100' label="产品费用￥"></el-table-column>
+
+                        </el-table>
+
+                    </el-col>
+                </el-row>
+            </div>
+        </template>
+
+        <span slot="footer" class="dialog-footer">
+            <el-button type="primary" @click="isShowInfo = false">关闭</el-button>
+        </span>
+    </el-dialog>
+
 
 
 </div>

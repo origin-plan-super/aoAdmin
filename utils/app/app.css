@@ -33,6 +33,14 @@ html {
   color: #333;
   line-height: 1.42857143; }
 
+/*工具类*/
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0;
+  padding: 0; }
+
 .h1 {
   font-size: 20px;
   margin-bottom: 15px; }

@@ -37,13 +37,22 @@
                     <el-input v-model="add.data.max" placeholder='订货上限'>
                     </el-input>
                 </el-form-item>
+
+                <el-form-item label="商品简述" :prop='add.data.goods_sketch'>
+                    <el-input v-model="add.data.goods_sketch" :rows="4" type='textarea' placeholder='商品简述 255字以内'>
+                    </el-input>
+                </el-form-item>
+
+
+
+                <!--  -->
                 <el-form-item label="产品头像" :prop='head_img.url'>
 
                     <el-input type='text' placeholder="请输入一个url地址或点击选择" v-model="head_img.url">
                         <template slot="prepend">http://</template>
                         <el-button @click='selectImg(head_img,btn.selectHeadImg)' slot="append">{{btn.selectHeadImg.title}}</el-button>
                     </el-input>
-                    <img class="head-img" v-if='head_img.url != ""' :src="getUrl(head_img.url)">
+                    <img class="head-img" v-if='head_img.url != ""' :src="$getUrl(head_img.url)">
 
                 </el-form-item>
 
@@ -88,7 +97,7 @@
                 </el-row>
 
                 <el-form-item size='small' label-width="80px">
-                    <img class="item-img" :src="getUrl(item.url)" v-if='item.url!==""'>
+                    <img class="item-img" :src="$getUrl(item.url)" v-if='item.url!==""'>
                 </el-form-item>
 
 

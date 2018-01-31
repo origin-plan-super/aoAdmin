@@ -118,11 +118,8 @@ var origin = (function () {
                     //登录验证
                     if (res.res == -992 || res.rse == -991) {
                         //登录失败跳转登录页
-                        window.location.href = '../login/login.html'
-                    } else {
-                        if (conf.success) {
-                            conf.success(res);
-                        }
+                        window.location.href = '../login/login.html';
+                        return;
                     }
                 } catch (error) {
                     console.error(conf.url + '：接口出现错误！');
@@ -132,6 +129,13 @@ var origin = (function () {
                     }
                     return false;
                 }
+
+                if (conf.success) {
+                    conf.success(res);
+                } else {
+                    console.warn('ajax没有成功请求回调');
+                }
+
             });
 
         }

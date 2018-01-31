@@ -12,7 +12,6 @@ Vue.component('order-list-comp', function (resolve, reject) {
             data: function () {
                 return {
                     conf: {
-
                         url: 'order/getList',
                         data: {
                             table: 'order',
@@ -53,39 +52,38 @@ Vue.component('order-list-comp', function (resolve, reject) {
                         isSearchLoading: false,
                     },
                     stateList: {
-                        0: {
-                            text: '待发货',
-                            type: 'danger'
-                        },
                         1: {
-                            text: '待收货',
+                            text: '等待支付',
                             type: 'info'
                         },
                         2: {
-                            text: '已签收',
-                            type: 'success'
+                            text: '已支付',
+                            type: 'danger'
                         },
                         3: {
-                            text: '退款/售后',
-                            type: ''
+                            text: '已发货 / 待收货',
+                            type: 'warning'
                         },
                         4: {
-                            text: '预订单',
-                            type: 'warning'
+                            text: '已签收 / 完成',
+                            type: 'success'
                         },
                         5: {
-                            text: '周期订单',
-                            type: 'warning'
-                        },
+                            text: '退款 / 售后',
+                            type: 'info'
+                        }
                     },
                     stateListValidate: [
-                        { text: '待发货', value: 0 },
-                        { text: '待收货', value: 1 },
-                        { text: '已签收', value: 2 },
-                        { text: '退款/售后', value: 3 },
-                        { text: '预订单', value: 4 },
-                        { text: '周期订单', value: 5 },
+                        { text: '等待支付', value: 1 },
+                        { text: '已支付', value: 2 },
+                        { text: '已发货/待收货', value: 3 },
+                        { text: '已签收/完成', value: 4 },
+                        { text: '退款/售后', value: 5 },
                     ],
+                    order: {
+
+                    },
+                    isShowInfo: false,
                 }
             },
             methods: {
@@ -94,19 +92,18 @@ Vue.component('order-list-comp', function (resolve, reject) {
                     this.conf.page.currentPage = localStorage[pagesName + '_tableCurrentPage'] ? parseInt(localStorage[pagesName + '_tableCurrentPage']) + 0 : 1;
                     //每页显示条数
                     this.conf.page.pageSize = localStorage[pagesName + '_tablePageSize'] ? parseInt(localStorage[pagesName + '_tablePageSize']) + 0 : 10;
-
                 },
-
                 filterTag(value, row) {
                     return row.state == value;
                 },
-
                 getState: function (item) {
 
+                    if (this.stateList[item.state] == null) {
+                        return this.stateList[1];
+                    }
                     return this.stateList[item.state];
 
                 },
-
                 getShowItem: function (name) {
 
                     if (!name) return true;
@@ -281,6 +278,99 @@ Vue.component('order-list-comp', function (resolve, reject) {
                     });
 
                 },
+                //去发货
+                deliverGoods: function (row, index) {
+                    console.log(row);
+                    //让用户输入快递号
+                    this.$prompt('请输入快递单号', '发货', {
+                        cancelButtonText: '取消',
+                        confirmButtonText: '确定',
+                    }).then((value) => {
+                        //发货的ajax
+                        value = value.value;
+                        console.log(value);
+
+                        var ajax = new Ajax({
+                            url: 'order/deliverGoods',
+                            data: {
+                                courier_nmumber: value,
+                                order_id: row.order_id,
+                            },
+                            success: (res) => {
+                                console.log(res);
+
+                                if (res.res == 1) {
+                                    this.$message({
+                                        message: '操作成功！',
+                                        type: 'success',
+                                    });
+                                    //刷新表格
+                                    this.refresh();
+
+                                }
+                                if (res.res < 0) {
+                                    this.$message({
+                                        message: '操作失败！',
+                                        type: 'error',
+                                    });
+                                }
+
+                            }
+                        });
+                        ajax.post();
+
+                    }).catch(() => {
+
+                        this.$message({
+                            message: '发货已取消',
+                            type: 'info',
+                        });
+                    });
+
+
+
+
+                },
+                show: function (row, index) {
+
+                    var order_id = row.order_id;
+
+                    if (this.order.order_id == order_id) {
+                        //直接显示
+                        this.isShowInfo = true;
+                    } else {
+                        //查询信息
+
+                        var ajax = new Ajax({
+                            url: 'order/getOrder',
+                            data: {
+                                order_id: order_id,
+                            },
+                            success: (res) => {
+
+
+                                if (res.res == 1) {
+                                    //成功
+                                    this.order = res.msg;
+                                    console.log(this.order);
+
+                                    this.isShowInfo = true;
+                                }
+                                if (res.res < 0) {
+                                    //查询失败
+                                    this.$message({
+                                        message: '订单查询失败！',
+                                        type: 'error'
+                                    })
+                                }
+
+                            }
+                        });
+                        ajax.get();
+                    }
+
+
+                }
             },
             watch: {},
             computed: {},

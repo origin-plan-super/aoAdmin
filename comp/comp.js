@@ -521,6 +521,7 @@ function regComp() {
                         this.add.data.goods_count = item.goods_count;
                         this.add.data.money = item.money;
                         this.add.data.max = item.max;
+                        this.add.data.goods_sketch = item.goods_sketch;
                         this.add.data.goods_info = item.goods_info;
 
                         this.add.data.depot.depot_name = item.depot_name;
@@ -651,7 +652,6 @@ function regComp() {
                             });
                         }
 
-
                         //组装要保存的数据
                         var add = {
                             //产品标题
@@ -659,6 +659,7 @@ function regComp() {
                             goods_count: _add.goods_count,
                             //产品详情
                             goods_info: _add.goods_info,
+                            goods_sketch: _add.goods_sketch,
                             //费用
                             money: _add.money,
                             max: _add.max,
@@ -1187,11 +1188,12 @@ function regPlugin() {
         }
         //取得一个地址
         Vue.prototype.$getUrl = function (url) {
-
+            if (!url) {
+                console.log(url);
+                return '';
+            }
             //取出index.php
-
             var _url
-
 
             if (url.indexOf('http') == -1) {
                 _url = serverRoot + url;

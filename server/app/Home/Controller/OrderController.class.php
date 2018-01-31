@@ -18,15 +18,15 @@ use Think\Controller;
 class OrderController extends CommonController {
     
     /**
-    * 获得
+    * 获得商品
     */
     public function getList(){
-        
+        //获得商品
         $conf=initGetList();
         
         $model=$conf['model'];
         $where=$conf['where'];
-        $where['user_id']=session('user_id');
+        // $where['user_id']=session('user_id');
         //生成数据
         $result=$model
         ->table('ao_dealer_goods as t1, ao_goods as t2,ao_depot as t3')
@@ -63,6 +63,9 @@ class OrderController extends CommonController {
     
     //获得订单
     public function getOrderList(){
+        
+        
+        $where=I('where')?I('where'):[];
         
         $where['t1.user_id']=session('user_id');
         $model=M();
@@ -130,45 +133,192 @@ class OrderController extends CommonController {
         
     }
     public function getOrder(){
+        //这里是批量查询订单
         
-        $order_id=$where['t1.order_id']=I('order_id');
-        $user_id=  session('user_id');
         
+        $orderLists=I('orderLists');
+        $user_id= session('user_id');
         $model=M();
-        $result= $model
-        ->table('ao_order as t1,ao_order_info as t2')
-        ->field('t1.*,t2.*')
-        ->where('t1.user_id = "'.$user_id.'"')
-        ->where($where)
-        ->find();
         
-        //=========判断=========
-        if($result){
-            $res['res']=1;
-            // 找商品
-            $order_info=html($result['order_info']);
-            $order_info=json_decode($order_info,true);
-            $goods_info=$order_info['goods_info'];
-            $address_info=$order_info['address_info'];
+        $order_money=0;
+        
+        foreach ($orderLists as $key => $value) {
+            $order_id=$value['order_id'];
             
-            $model=M('dealer_goods');
-            $money=0;
+            $where['t1.order_id']=$order_id;
+            $result= $model
+            ->table('ao_order as t1,ao_order_info as t2')
+            ->field('t1.*,t2.*')
+            ->where('t1.order_id = t2.order_id and t1.user_id = "'.$user_id.'"')
+            ->where($where)
+            ->find();
             
-            foreach ($goods_info as $key => $value) {
-                $money+=$value['money'];
+            //=========判断=========
+            if($result){
+                $res['res']=1;
+                // 找商品
+                $order_info=html($result['order_info']);
+                $order_info=json_decode($order_info,true);
+                $goods_info=$order_info['goods_info'];
+                $address_info=$order_info['address_info'];
+                
+                $money=0;
+                
+                foreach ($goods_info as $key => $value) {
+                    $money+=$value['money']*$value['num'];
+                }
+                $order_money+=$money;
+                
+                $info=[];
+                $info['order_id']=$order_id;
+                $info['order_info']=$order_info;
+                $info['money']=$money;
+                $res['msg'][]=$info;
+                
+            }else{
+                $res['res']=-1;
             }
-            
-            $res['msg']['goods_info']['money']=$money;
-            $res['msg']['address_info']=$address_info;
-        }else{
-            $res['res']=-1;
         }
+        $res['order_money']=$order_money;
+        
         //=========判断end=========
         //=========输出json=========
         echo json_encode($res);
         //=========输出json=========
         
     }
+    public function pay(){
+        
+        $orderLists=I('orderLists');
+        $ids=[];
+        
+        foreach ($orderLists as $key => $value) {
+            $ids[]=$value['order_id'];
+        }
+        
+        //修改为支付成功状态即可
+        $model=M('order');
+        $where=[];
+        $where['order_id']=array('in',$ids);
+        $save['state']=2;
+        $result=$model->where($where)->save($save);
+        
+        //=========判断=========
+        if($result!==false){
+            $res['res']=1;
+            $res['msg']=$result;
+            //支付成功后需要将商品的数量减少
+            decGoods($ids);
+        }else{
+            $res['res']=-1;
+            $res['msg']=$result;
+        }
+        //=========判断end=========
+        echo json_encode($res);
+        
+    }
+    
+    /**
+    * 保存订单
+    */
+    public function saveOrder(){
+        
+        $order_id=I('order_id');
+        $save=I('save');
+        $model=M('order');
+        $where=[];
+        $where['order_id']=$order_id;
+        $order=$model->where($where)->find();
+        
+        
+        
+        if($order['state']==1){
+            //只有未支付的订单才可以编辑
+            
+            $model=M('order_info');
+            $where=[];
+            $where['order_id']=$order_id;
+            $result = $model->where($where)->save($save);
+            
+            
+            //=========判断=========
+            if($result!==false){
+                $res['res']=1;
+                $res['msg']=$result;
+            }else{
+                $res['res']=-1;
+                $res['msg']=$result;
+            }
+            //=========判断end=========
+            
+        }else{
+            $res['res']=-1;
+        }
+        
+        
+        //=========输出json=========
+        echo json_encode($res);
+        //=========输出json=========
+        
+    }
+    
+    
+    //让一个数组的订单进入回收站
+    public function setRecycle(){
+        
+        $ids=I('ids');
+        $model=M('order');
+        $where=[];
+        $where['order_id']=array('in',$ids);
+        $save['is_recycle']=1;
+        $result=$model->where($where)->save($save);
+        
+        //=========判断=========
+        if($result !==false){
+            $res['res']=1;
+            $res['msg']=$result;
+        }else{
+            $res['res']=-1;
+            $res['msg']=$result;
+        }
+        //=========判断end=========
+        //=========输出json=========
+        echo json_encode($res);
+        //=========输出json=========
+        
+        
+        
+    }
+    
+    //还原订单
+    public function reduction(){
+        
+        $ids=I('ids');
+        $model=M('order');
+        $where=[];
+        $where['order_id']=array('in',$ids);
+        $save['is_recycle']=0;
+        $result=$model->where($where)->save($save);
+        
+        //=========判断=========
+        if($result !==false){
+            $res['res']=1;
+            $res['msg']=$result;
+        }else{
+            $res['res']=-1;
+            $res['msg']=$result;
+        }
+        //=========判断end=========
+        //=========输出json=========
+        echo json_encode($res);
+        //=========输出json=========
+        
+        
+        
+    }
+    
+    
+    
     
     
 }

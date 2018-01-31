@@ -38,8 +38,8 @@
                             <el-col :lg='3' :md='6' :sm='12' v-for='(item,index) in paper.list' :key='item.paper_id'>
                                 <el-card class="item" :body-style="{ padding: '0px' }">
 
-                                    <div class="img" :style="[{backgroundImage:'url('+getImg(index,item,item.head_img)+')'}]" @click='setActive(index,item,paper.list)'>
-                                        <img :src="getImg(index,item,item.head_img)" class="hide" @error='item.isLoading=false;item.isError=true'>
+                                    <div class="img" :style="[{backgroundImage:'url('+$getUrl(item.head_img)+')'}]" @click='setActive(index,item,paper.list)'>
+                                        <img :src="$getUrl(item.head_img)" class="hide" @error='item.isLoading=false;item.isError=true'>
 
                                         <div class="error" v-if='item.isError'>
                                             <div class="error-content">

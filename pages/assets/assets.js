@@ -406,6 +406,8 @@ pages({
             ajax.get();
         },
         getImg: function (index, item) {
+            console.error('请使用$getUrl！', index, item);
+            return;
             if (index % 3 == 0) {
                 // return '../../assets/ ' + item.url;
             }

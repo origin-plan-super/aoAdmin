@@ -3,8 +3,8 @@
     <el-row :gutter="10" style="margin-bottom: 10px;">
 
         <el-col :lg='3' :md='4' :sm='6' v-for='(item,index) in list'>
-            <div class="img-list-item" :style="[{backgroundImage:'url('+getImg(index,item,item.url)+')'}]" @click='setActive(index,item,list)'>
-                <img :src="getImg(index,item,item.url)" class="hide" @error='item.isLoading=false;item.isError=true'>
+            <div class="img-list-item" :style="[{backgroundImage:'url('+$getUrl(item.url)+')'}]" @click='setActive(index,item,list)'>
+                <img :src="$getUrl(item.url)" class="hide" @error='item.isLoading=false;item.isError=true'>
                 <div class="error" v-if='item.isError'>
                     <div class="error-content">
                         <div class="info">未配置封面！</div>
