@@ -455,10 +455,9 @@ Vue.component('dealer-goods-comp', function (resolve, rejpagesect) {
                     this.edit.isShow = false;
                 },
                 addGoods: function (item, index) {
+
                     var add = item;
-
                     add.user_id = this.userInfo.user_id;
-
                     var ajax = new Ajax({
                         url: serverRootAdmin + 'dealer/addGoods',
                         data: {
@@ -466,6 +465,7 @@ Vue.component('dealer-goods-comp', function (resolve, rejpagesect) {
                         },
                         success: (res) => {
                             if (res.res == 2) {
+
                                 this.$message({
                                     message: '已经指派过了~',
                                     type: 'info'

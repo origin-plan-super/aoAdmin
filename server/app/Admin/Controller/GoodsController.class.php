@@ -19,7 +19,7 @@ class GoodsController extends Controller {
         
         //=========判断=========
         if($result!==false && $result !== null){
-            //总条数
+            //总条数S
             $res['count']=count($result);
             
             

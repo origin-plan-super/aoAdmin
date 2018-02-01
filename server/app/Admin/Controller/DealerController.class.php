@@ -117,19 +117,13 @@ class DealerController extends Controller {
     //给代理商指派一个商品
     public function addGoods(){
         $goods=I('add');
-        
         $model=M('dealer_goods');
-        
         //先看看有没有
-        
         $where=[];
         $where['user_id']=$goods['user_id'];
         $where['goods_id']=$goods['goods_id'];
-        
         $result=$model->where($where)->find();
-        
         if($result===null){
-            
             $goods['add_time']=time();
             $goods['edit_time']=time();
             $result=  $model->add($goods,null,true);
@@ -139,15 +133,12 @@ class DealerController extends Controller {
             }else{
                 $res['res']=-1;
             }
-            
         }else{
             //已经指派
             $result=true;
             $res['res']=2;
         }
-        
         //=========判断end=========
-        
         //=========输出json=========
         echo json_encode($res);
         //=========输出json=========

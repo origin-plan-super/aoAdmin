@@ -132,9 +132,8 @@ class OrderController extends CommonController {
         //=========输出json=========
         
     }
+    //这里是批量查询订单
     public function getOrder(){
-        //这里是批量查询订单
-        
         
         $orderLists=I('orderLists');
         $user_id= session('user_id');
@@ -229,8 +228,6 @@ class OrderController extends CommonController {
         $where=[];
         $where['order_id']=$order_id;
         $order=$model->where($where)->find();
-        
-        
         
         if($order['state']==1){
             //只有未支付的订单才可以编辑

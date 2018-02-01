@@ -572,3 +572,13 @@ function getOrderMoney($orderInfo){
     }
     return $money;
 }
+
+//将数组转换为json字符串
+function json($arr){
+    return json_encode($arr);
+}
+
+//将字符串转换为json数组
+function jsonD($arr ,$is=false){
+    return json_decode($arr,$is);
+}
