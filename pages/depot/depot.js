@@ -27,6 +27,8 @@ pages({
             setTimeout(() => {
                 var is = true;
                 while (is) {
+                    console.log(is);
+
                     if (this.$refs.editDepot != null) {
                         is = false;
                         this.$refs.editDepot.setData(item);
