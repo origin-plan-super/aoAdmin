@@ -23,18 +23,13 @@ pages({
             this.edit.isShow = true;
             this.list.isShow = false;
 
-            setTimeout(() => {
-                var is = true;
-                while (is) {
-                    console.log(is);
-
-                    if (this.$refs.editDepot != null) {
-                        is = false;
-                        this.$refs.editDepot.setData(item);
-                        return false;
-                    }
+            var intV = setInterval(() => {
+                if (this.$refs.editDepot != null) {
+                    this.$refs.editDepot.setData(item);
+                    clearInterval(intV);
                 }
-            }, 100);
+            }, 200)
+
 
         },
         addSuccess: function (res) {
