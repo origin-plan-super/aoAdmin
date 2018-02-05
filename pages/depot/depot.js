@@ -19,7 +19,6 @@ pages({
         },
         editDepot: function (item, index) {
 
-
             this.edit.isShow = true;
             this.list.isShow = false;
 
