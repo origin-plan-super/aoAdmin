@@ -19,15 +19,17 @@ pages({
         },
         editDepot: function (item, index) {
 
+
+
             this.edit.isShow = true;
             this.list.isShow = false;
 
             setTimeout(() => {
                 var is = true;
                 while (is) {
-                    if (this.$refs.editDealer != null) {
+                    if (this.$refs.editDepot != null) {
                         is = false;
-                        this.$refs.editDealer.setData(item);
+                        this.$refs.editDepot.setData(item);
                         return false;
                     }
                 }

@@ -246,7 +246,7 @@ Vue.component('depot-comp', function (resolve, rejpagesect) {
             },
             methods: {
                 update: function (item) {
-
+                    console.log(item);
                     this.$nextTick(_ => {
 
                         if (item == null) {
