@@ -35,3 +35,37 @@
 .group {
     margin-bottom: 20px;
 }
+
+.depot-list {
+    background-color: #f6f6f6;
+    padding: 20px;
+    padding-top: 0;
+    margin: 10px 0;
+    .depot-title {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+    .depot-item {
+        border-bottom: dashed 1px #ddd;
+        padding: 10px 0;
+    }
+}
+
+.level-list {
+    white-space: nowrap;
+    .level-item {
+        padding: 10px 0;
+        border-bottom: dashed 1px #ddd;
+        .el-input {
+            display: inline-block;
+            width: 100px;
+        }
+        .level-title {
+            margin-right: 5px;
+        }
+        .level-value {}
+    }
+    .level-add {
+        padding: 10px 0;
+    }
+}

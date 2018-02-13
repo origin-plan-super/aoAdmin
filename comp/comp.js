@@ -404,7 +404,11 @@ function regComp() {
                             _url: '',
                             is_select: false,
                         },
-
+                        depot: {
+                            depot_name: '',
+                        },
+                        classList: [],
+                        class_title: '',
                         add: {
                             data: {
                                 goods_title: '',
@@ -433,10 +437,22 @@ function regComp() {
                                     },
                                 ],
                                 goods_info: '',
-                                depot: {
-                                    depot_id: '',
-                                    depot_title: ''
-                                },
+                                depot_list: [],
+                                level_list: [
+                                    {
+                                        level: 1,
+                                        money: ""
+                                    },
+                                    {
+                                        level: 2,
+                                        money: ""
+                                    },
+                                    {
+                                        level: 3,
+                                        money: ""
+                                    },
+                                ],
+                                class_id: '',
                             },
 
                         },
@@ -524,28 +540,32 @@ function regComp() {
                         this.add.data.goods_sketch = item.goods_sketch;
                         this.add.data.goods_info = item.goods_info;
 
-                        this.add.data.depot.depot_name = item.depot_name;
-                        this.add.data.depot.depot_id = item.depot_id;
+                        this.add.data.depot_list = [];
+                        this.add.data.depot_list = item.depot_list;
 
-                        //找仓库
-                        // var ajax = new Ajax({
-                        //     url: serverRootAdmin + 'depot/getList',
-                        //     data: {
-                        //         table: 'depot',
-                        //         where: {
-                        //             depot_id: item.depot_id
-                        //         }
-                        //     },
-                        //     success: (res) => {
-                        //         console.log(res);
-                        //         if (res.res == 1) {
-                        //             this.add.data.depot.depot_name = res.msg[0].depot_name;
-                        //             this.add.data.depot.depot_id = item.depot_id;
-                        //         }
-                        //     }
-                        // });
+                        this.add.data.class_id = item.class_id;
 
-                        // ajax.get();
+
+                        this.add.data.level_list = [];
+                        if (item.level_list.length <= 0) {
+                            this.add.data.level_list = [
+                                {
+                                    level: 1,
+                                    money: ""
+                                },
+                                {
+                                    level: 2,
+                                    money: ""
+                                },
+                                {
+                                    level: 3,
+                                    money: ""
+                                },
+                            ];
+
+                        } else {
+                            this.add.data.level_list = item.level_list;
+                        }
 
 
                         var specList = [];
@@ -596,6 +616,9 @@ function regComp() {
                         });
 
                     },
+                    delDepot: function (item, index, list) {
+                        list.splice(index, 1)
+                    },
                     remove: function (item, index, list) {
                         list.splice(index, 1);
                     },
@@ -611,10 +634,7 @@ function regComp() {
                     },
                     showSpecEdit: function (item, index) {
                         item.isEdit = true;
-                        this.$nextTick(_ => {
-
-                        });
-
+                        this.$nextTick(_ => { });
                     },
                     addSpec: function () {
                         this.add.data.spec.push({
@@ -627,6 +647,8 @@ function regComp() {
                     },
 
                     saveGoods: function () {
+
+
 
                         var goods_info = window[this.type + 'sum'].summernote('code');
                         var _add = this.add.data;
@@ -652,6 +674,8 @@ function regComp() {
                             });
                         }
 
+
+
                         //组装要保存的数据
                         var add = {
                             //产品标题
@@ -667,7 +691,9 @@ function regComp() {
                             head_img: this.head_img.url,
                             imglist: JSON.stringify(imglist),
                             spec: JSON.stringify(specList),
-                            depot_id: _add.depot.depot_id
+                            depot_list: JSON.stringify(_add.depot_list),
+                            level_list: JSON.stringify(_add.level_list),
+                            class_id: _add.class_id,
                         }
                         var data;
                         var url;
@@ -748,11 +774,7 @@ function regComp() {
                     },
 
                     querySearchAsync(queryString, cb) {
-
-                        // var restaurants = this.restaurants;
-                        // var results = queryString ? restaurants.filter(this.createStateFilter(queryString)) : restaurants;
-                        console.log(queryString);
-
+                        //执行异步搜索
                         var ajax = new Ajax({
                             url: serverRootAdmin + 'depot/getList',
                             data: {
@@ -768,9 +790,11 @@ function regComp() {
                                     var list = [];
 
                                     for (var i = 0; i < res.msg.length; i++) {
+                                        res.msg[i].depot_count = 0;
                                         list.push({
                                             value: res.msg[i].depot_name,
                                             depot_id: res.msg[i].depot_id,
+                                            data: res.msg[i]
                                         })
                                     }
                                     cb(list);
@@ -790,20 +814,40 @@ function regComp() {
                     },
                     handleSelect(item) {
 
+                        //选中搜索项
+                        this.add.data.depot_list.push(item.data);
+                        this.depot.depot_name = '';
 
-                        // this.add.data.depot.depot_name = item.value;
-                        this.add.data.depot.depot_id = item.depot_id;
                     }
 
 
                 },
                 computed: {},
-
                 watch: {
                     'head_img.url': function (val) {
                         // this.head_img._url = this.getUrl(val);
                     },
 
+                },
+                mounted: function () {
+                    this.$nextTick(_ => {
+
+                        var ajax = new Ajax({
+                            url: 'class/getList',
+                            data: {
+                                table: 'class'
+                            },
+                            success: (res) => {
+                                console.log(res.msg);
+
+                                if (res.res == 1) {
+                                    this.classList = res.msg;
+                                }
+                            }
+                        });
+                        ajax.get();
+
+                    })
                 }
 
             });
@@ -864,10 +908,7 @@ function regComp() {
                             //搜索
                             isSearchLoading: false,
                         },
-                        depotList: [
-                            { text: '北京仓库', value: '1' },
-                            { text: '上海仓库', value: '2' }
-                        ],
+
 
                     }
                 },
@@ -923,37 +964,12 @@ function regComp() {
                         return false;
 
                     },
-                    filterTag(value, row) {
-                        return row.depot_id === value;
-                    },
                     onLoadPage: function () {
-
                         //当前页   
                         this.conf.page.currentPage = localStorage[pagesName + '_tableCurrentPage'] ? parseInt(localStorage[pagesName + '_tableCurrentPage']) + 0 : 1;
                         //每页显示条数
                         this.conf.page.pageSize = localStorage[pagesName + '_tablePageSize'] ? parseInt(localStorage[pagesName + '_tablePageSize']) + 0 : 10;
                         //加载仓库
-                        var ajax = new Ajax({
-                            url: serverRootAdmin + 'depot/getList',
-                            data: {
-                                table: 'depot',
-                            },
-                            success: (res) => {
-                                if (res.res == 1) {
-                                    var list = [];
-                                    for (let i = 0; i < res.msg.length; i++) {
-
-                                        list.push({
-                                            text: res.msg[i].depot_name,
-                                            value: res.msg[i].depot_id,
-                                        })
-
-                                    }
-                                    this.depotList = list;
-                                }
-                            }
-                        });
-                        ajax.get();
                     },
                     search: function () {
                         //搜索 

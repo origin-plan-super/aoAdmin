@@ -516,7 +516,7 @@ Vue.component('dealer-goods-comp', function (resolve, rejpagesect) {
                             key_where: 't1.goods_title',
                             key: this.conf.table.key,
                             where: {
-                                't3.user_id': this.userInfo.user_id,
+                                't2.user_id': this.userInfo.user_id,
                             }
                         }
                     }, (res) => {
@@ -538,7 +538,7 @@ Vue.component('dealer-goods-comp', function (resolve, rejpagesect) {
                             data: {
                                 table: 'dealer_goods',
                                 where: {
-                                    't3.user_id': this.userInfo.user_id,
+                                    't2.user_id': this.userInfo.user_id,
                                 }
                             }
                         },
@@ -557,46 +557,47 @@ Vue.component('dealer-goods-comp', function (resolve, rejpagesect) {
 
                 },
                 del: function (index, row) {
+                    var ajax = {
+                        url: serverRootAdmin + 'dealer/delGoods',
+                        data: {
+                            user_id: this.userInfo.user_id,
+                            goods_id: row.goods_id,
+                        },
+                        success: (res) => {
 
+                            this.$message({
+                                type: 'success',
+                                message: '删除成功~'
+                            });
+
+                        },
+                        error: (res) => {
+
+                            if (res === false) {
+                                this.$message({
+                                    type: 'error',
+                                    message: '删除接口出现错误！'
+                                });
+                                return false;
+                            }
+                            if (res.res == -1) {
+                                //删除失败
+                                this.$message({
+                                    type: 'error',
+                                    message: '删除失败！'
+                                });
+                            }
+                        }
+                    }
+                    this.$refs['table'].del(index, row, ajax);
+                    return;
                     //删除单个
                     this.$confirm('此操作将永久删除该数据, 是否继续?', '提示', {
                         confirmButtonText: '确定',
                         cancelButtonText: '取消',
                         type: 'warning'
                     }).then(() => {
-                        var ajax = {
-                            url: serverRootAdmin + 'dealer/delGoods',
-                            data: {
-                                user_id: this.userInfo.user_id,
-                                goods_id: row.goods_id,
-                            },
-                            success: (res) => {
 
-                                this.$message({
-                                    type: 'success',
-                                    message: '删除成功~'
-                                });
-
-                            },
-                            error: (res) => {
-
-                                if (res === false) {
-                                    this.$message({
-                                        type: 'error',
-                                        message: '删除接口出现错误！'
-                                    });
-                                    return false;
-                                }
-                                if (res.res == -1) {
-                                    //删除失败
-                                    this.$message({
-                                        type: 'error',
-                                        message: '删除失败！'
-                                    });
-                                }
-                            }
-                        }
-                        this.$refs['table'].del(index, row, ajax);
                     }).catch(() => {
                         this.$message({
                             type: 'info',
@@ -668,6 +669,24 @@ Vue.component('dealer-goods-comp', function (resolve, rejpagesect) {
                 },
                 filterTag(value, row) {
                     return row.type === value;
+                },
+                getMoney: function (item, index) {
+
+                    var list = item.level_list;
+                    if (list == null) {
+                        return '未配置此级别的价格！';
+                    } else {
+                        list = JSON.parse(list);
+                    }
+
+                    for (let i = 0; i < list.length; i++) {
+
+                        if (this.userInfo.level == list[i].level) {
+                            return list[i].money;
+                        }
+                    }
+                    return '未配置此级别的价格！';
+
                 },
             },
             computed: {},

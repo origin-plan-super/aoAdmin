@@ -6,8 +6,8 @@
             <span>{{title}}</span>
         </div>
 
-
         <el-form ref="dealerForm" :model="dealer.data" label-width="auto">
+
             <p v-if='dealer.data.user_id!=null'>
                 ID: {{dealer.data.user_id}}
             </p>
@@ -28,6 +28,7 @@
                 <el-button type="primary" @click="onSubmit">保存用户信息</el-button>
                 <el-button @click='cancel'>关闭</el-button>
             </el-form-item>
+
         </el-form>
 
     </el-card>

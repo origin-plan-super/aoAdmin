@@ -227,7 +227,6 @@ function save(){
     }
     
     
-    $save['edit_time']=time();
     //获得表名并且处理表名大小写
     $table = strtolower(I('table'));
     //获得条件查询
@@ -245,20 +244,21 @@ function save(){
         
     }
     
-    
-    
-    
     //创建模型
     $model=M($table);
     $result=$model->where($where)->save($save);
     
-    
-    $res['sql']=$model->_sql();
     //=========判断=========
-    if($result!==false){
+    if($result!==0 && $result!==false){
         $res['res']=1;
+        $save['edit_time']=time();
+        $result=$model->where($where)->save($save);
     }else{
         $res['res']=-1;
+    }
+    
+    if($result===0){
+        $res['res']=0;
     }
     //=========判断end=========
     

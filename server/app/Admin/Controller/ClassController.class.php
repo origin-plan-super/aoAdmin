@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class GoodsController extends Controller {
+class ClassController extends Controller {
     
     public function getList(){
         $conf=initGetList();
@@ -11,23 +11,17 @@ class GoodsController extends Controller {
         
         $result=$model
         ->where($where)
-        ->order('goods_id desc,add_time desc')
+        ->order('add_time desc')
         ->select();
         
         //=========判断=========
         if($result!==false && $result !== null){
-            //总条数S
-            
+            //总条数
             $res['count']=count($result);
             
             
             $result=getPageList($conf,$result);
             $result=toTime($result);
-            $result=toHtml($result,'depot_list');
-            $result=toHtml($result,'level_list');
-            $result=toHtml($result,'goods_info');
-            $result=toHtml($result,'imglist');
-            $result=toHtml($result,'spec');
             $res['res']=1;
             $res['msg']=$result;
             
@@ -49,7 +43,7 @@ class GoodsController extends Controller {
         
         // $id='goods_'.rand();
         
-        $res=add(false,'auto');
+        $res=add(false,'md5');
         //=========输出json=========
         echo json_encode($res);
         //=========输出json=========
@@ -61,21 +55,8 @@ class GoodsController extends Controller {
     public function del(){
         $res=[];
         
-        $delType=I('delType',null);
+        $res=del();
         
-        if($delType==='1'){
-            //字段隐藏
-            $res=del(true,'is_recycle',1);
-        }
-        if($delType==='0'){
-            //真实删除
-            $res=del();
-        }
-        
-        if($delType === null ){
-            //真实删除
-            $res=del();
-        }
         //=========输出json=========
         echo json_encode($res);
         //=========输出json=========
@@ -85,23 +66,8 @@ class GoodsController extends Controller {
     * 批量删除
     */
     public function dels(){
+        $res=dels();
         
-        $delType=I('delType',null);
-        $res=I();
-        if($delType==='1'){
-            //字段隐藏
-            $res=dels(true,'is_recycle',1);
-            
-        }
-        if($delType==='0'){
-            //真实删除
-            $res=dels();
-        }
-        
-        if($delType === null ){
-            //真实删除
-            $res=dels();
-        }
         //=========输出json=========
         echo json_encode($res);
         //=========输出json=========

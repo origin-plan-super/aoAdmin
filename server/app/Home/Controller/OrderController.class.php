@@ -75,16 +75,44 @@ class OrderController extends CommonController {
         ->where('t1.order_id = t2.order_id')
         ->where($where)
         ->select();
+        
         //=========判断=========
         if($result !==false){
             $res['res']=1;
             $result=toHtml($result,'order_info');
+            
+            for ($i=0; $i < count($result); $i++) {
+                $result[$i]['order_info']=json_decode($result[$i]['order_info'],true);
+                $money=0;
+                $goods_info=$result[$i]['order_info']['goods_info'];
+                
+                foreach ($goods_info as $key => $value) {
+                    $level_list=$value['level_list'];
+                    $level=session('user_info.level');
+                    
+                    for ($j=0; $j <count($level_list) ; $j++) {
+                        
+                        if($level_list[$j]['level']==$level){
+                            $goods_info[$key]['money']=$level_list[$j]['money'];
+                            $money+=$level_list[$j]['money']*$value['num'];
+                        }
+                        
+                    }
+                    $result[$i]['order_info']['goods_info']=$goods_info;
+                }
+                $result[$i]['money']=$money;
+                
+            }
+            
+            
             $res['msg']=$result;
         }else{
             $res['res']=-1;
             $res['msg']=$result;
         }
         //=========判断end=========
+        
+        
         
         //=========输出json=========
         echo json_encode($res);
@@ -163,9 +191,28 @@ class OrderController extends CommonController {
                 
                 $money=0;
                 
+                
                 foreach ($goods_info as $key => $value) {
-                    $money+=$value['money']*$value['num'];
+                    $level_list=$value['level_list'];
+                    $level=session('user_info.level');
+                    
+                    for ($j=0; $j <count($level_list) ; $j++) {
+                        
+                        if($level_list[$j]['level']==$level){
+                            $goods_info[$key]['money']=$level_list[$j]['money'];
+                            $money+=$level_list[$j]['money']*$value['num'];
+                        }
+                        
+                    }
+                    $result[$i]['order_info']['goods_info']=$goods_info;
                 }
+                
+                // foreach ($goods_info as $key => $value) {
+                //     $money+=$value['money']*$value['num'];
+                //     dump($goods_info);
+                //     die;
+                // }
+                
                 $order_money+=$money;
                 
                 $info=[];

@@ -12,7 +12,7 @@
     ],
     "nav": [
         {
-            "title": "经销商管理",
+            "title": "代理商管理",
             "id": "dealer",
             "icon": "fa fa-user-o"
         },
@@ -32,6 +32,11 @@
             "icon": "fa fa-cube"
         },
         {
+            "title": "分类管理",
+            "id": "class",
+            "icon": "el-icon-menu"
+        },
+        {
             "title": "消息管理",
             "id": "paper",
             "icon": "el-icon-message"
@@ -44,6 +49,11 @@
         {
             "title": "反馈管理",
             "id": "feedback-list",
+            "icon": "el-icon-service"
+        },
+        {
+            "title": "理赔管理",
+            "id": "indemnity",
             "icon": "el-icon-service"
         }
     ]

@@ -23,3 +23,28 @@
 
 .group {
   margin-bottom: 20px; }
+
+.depot-list {
+  background-color: #f6f6f6;
+  padding: 20px;
+  padding-top: 0;
+  margin: 10px 0; }
+  .depot-list .depot-title {
+    font-size: 14px;
+    padding: 5px 0; }
+  .depot-list .depot-item {
+    border-bottom: dashed 1px #ddd;
+    padding: 10px 0; }
+
+.level-list {
+  white-space: nowrap; }
+  .level-list .level-item {
+    padding: 10px 0;
+    border-bottom: dashed 1px #ddd; }
+    .level-list .level-item .el-input {
+      display: inline-block;
+      width: 100px; }
+    .level-list .level-item .level-title {
+      margin-right: 5px; }
+  .level-list .level-add {
+    padding: 10px 0; }

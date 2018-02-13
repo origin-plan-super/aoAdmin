@@ -29,6 +29,11 @@ class CommonController extends Controller {
         $is=isUserLogin();
         
         if($is==1){
+            $model=M('user');
+            $where['user_id']=session('user_id');
+            $user_info=$model->where($where)->find();
+            session('user_info',$user_info);
+            
             //登录成功，继续操作
         }
         if($is==-991){

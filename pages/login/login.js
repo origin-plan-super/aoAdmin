@@ -5,6 +5,7 @@ pages({
     data: {
         visible: false,
         isShowLoginForm: false,
+        btnLoading: false,
         appName: "澳洲物流",
         code: '',
         adminInfo: {
@@ -29,6 +30,8 @@ pages({
         alertType: '',
         alertClosable: false,
         isShowAlert: false,
+        btnText: '登录',
+        btnType: 'primary',
     },
 
     methods: {
@@ -40,18 +43,21 @@ pages({
             this.code = serverRootAdmin + 'index/getCode/' + Math.random();
         },
         onSubmit(formName) {
+            this.btnLoading = true;
+            this.btnText = '登录中';
+
             this.getCode();
 
             var _this = this;
 
             _this.isShowAlert = false;
 
-            this.$refs[formName].validate(function (valid) {
+            this.$refs[formName].validate((valid) => {
 
 
                 if (valid) {
                     //验证没有问题
-                    $.post(serverRootAdmin + 'index/login', _this.adminInfo, function (res) {
+                    $.post(serverRootAdmin + 'index/login', _this.adminInfo, (res) => {
 
                         res = JSON.parse(res);
                         _this.isShowAlert = true;
@@ -60,6 +66,10 @@ pages({
                             //登录成功
                             _this.alertType = 'success';
                             _this.alertInfo = '登录成功~正在为您跳转';
+                            this.btnLoading = false;
+                            this.btnType = 'success';
+                            this.btnText = '登录成功~';
+
                             setTimeout(function () {
                                 window.location.href = '../../pages/goods/goods.html';
                             }, 500);

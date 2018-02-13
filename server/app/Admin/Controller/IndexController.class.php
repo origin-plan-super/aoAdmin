@@ -5,7 +5,7 @@ class IndexController extends Controller {
     
     public function index(){
         
-        echo '<h1>CTOS检测中心</h1>';
+        echo '<h1>CTOS检测中心s</h1>';
         dump(session());
         dump(F());
         

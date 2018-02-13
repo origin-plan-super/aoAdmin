@@ -25,8 +25,10 @@ pages({
             this.list.isShow = false;
 
             if (typeof (item.spec) == 'string') {
-                item.spec = JSON.parse(item.spec);
-                item.imglist = JSON.parse(item.imglist);
+                item.spec = item.spec == null ? [] : JSON.parse(item.spec);
+                item.imglist = item.imglist == null ? [] : JSON.parse(item.imglist);
+                item.depot_list = item.depot_list == null ? [] : JSON.parse(item.depot_list);
+                item.level_list = item.level_list == null ? [] : JSON.parse(item.level_list);
             }
 
             this.edit.item = item;

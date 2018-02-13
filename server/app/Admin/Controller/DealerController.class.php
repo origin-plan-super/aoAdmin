@@ -39,12 +39,13 @@ class DealerController extends Controller {
         $where=$conf['where'];
         
         $result=$model
-        ->table('ao_goods as t1,ao_depot as t2,ao_dealer_goods as t3')
-        ->field('t1.*,t1.money as t1_money,t2.depot_name,t2.depot_id,t3.*')
-        ->order('t3.goods_id desc, t3.add_time desc')
-        ->where('t3.goods_id = t1.goods_id and t1.depot_id = t2.depot_id ')
+        ->table('ao_goods as t1,ao_dealer_goods as t2')
+        ->field('t1.*,t2.*')
+        ->order('t2.goods_id desc,t2.add_time desc')
+        ->where('t2.goods_id = t1.goods_id')
         ->where($where)
         ->select();
+        
         
         //=========判断=========
         if($result!==false && $result !== null){
@@ -54,8 +55,8 @@ class DealerController extends Controller {
             $result=getPageList($conf,$result);
             $result=toTime($result);
             $result=toHtml($result,'goods_info');
-            $result=toHtml($result,'imglist');
-            $result=toHtml($result,'spec');
+            $result=toHtml($result,'level_list');
+            
             
             $res['res']=1;
             $res['msg']=$result;

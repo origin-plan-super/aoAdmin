@@ -34,6 +34,11 @@ html {
   line-height: 1.42857143; }
 
 /*工具类*/
+.well-panel {
+  background-color: #f6f6f6;
+  padding: 10px 20px;
+  margin: 10px 0; }
+
 hr {
   border: none;
   height: 1px;
@@ -110,6 +115,7 @@ hr {
 .text-danger {
   color: #F56C6C; }
 
+.text-info,
 .text-muted {
   color: #909399; }
 
