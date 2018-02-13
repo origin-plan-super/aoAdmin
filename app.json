@@ -50,11 +50,7 @@
             "title": "反馈管理",
             "id": "feedback-list",
             "icon": "el-icon-service"
-        },
-        {
-            "title": "理赔管理",
-            "id": "indemnity",
-            "icon": "el-icon-service"
         }
+      
     ]
 }
