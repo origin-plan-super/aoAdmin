@@ -20,7 +20,6 @@ class GoodsController extends Controller {
             
             $res['count']=count($result);
             
-            
             $result=getPageList($conf,$result);
             $result=toTime($result);
             $result=toHtml($result,'depot_list');

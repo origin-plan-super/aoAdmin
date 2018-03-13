@@ -37,25 +37,55 @@ class IndexController extends Controller {
             dump($model->_sql());
         }
         
-        
     }
     
     public function login(){
         
-        $user_id=I('post.user_id','false');
-        $user_pwd=I('post.user_pwd','false');
+        $user_id=I('post.user_id');
+        $user_pwd=I('post.user_pwd');
+        $user_code=I('post.user_code');
+        $isLogin=false;
         $res=[];
         
-        //验证账户密码
-        //验证用户的账户需要多种类型的判断
-        $result= login('user',$user_id,$user_pwd,false);
-        
-        if($result){
+        if($user_code){
             
-            //账户和密码正确
+            //验证码登录
+            $user_code=md5($user_id.$user_code.__KEY__);
+            
+            $where=[];
+            $where['user_id']=$user_id;
+            $model=M('user_code');
+            $result=$model->where($where)->find();
+            //取出后立刻删除
+            $model->where($where)->delete();
+            
+            if($result['user_code']===$user_code){
+                //验证码正确，开始添加token
+                $isLogin=true;
+            }else{
+                $res['msg']="验证码错误！";
+            }
+            
+        }
+        
+        if($user_pwd){
+            //账号密码登录
+            //验证账户密码
+            //验证用户的账户需要多种类型的判断
+            //验证用户名和密码是否匹配
+            $result= login('user',$user_id,$user_pwd,true);
+            if($result){
+                //账户和密码正确
+                $isLogin=true;
+            }else{
+                $res['msg']="账号或密码错误！";
+            }
+        }
+        //不管哪样登录，都添加token
+        
+        if($isLogin){
             //换取token
             $token=md5($user_id.time().rand());
-            
             $model=M('token');
             $add['user_id']=$user_id;
             $add['token']=$token;
@@ -67,16 +97,12 @@ class IndexController extends Controller {
                 $res['res']=1;
                 $res['token']=$token;
                 $res['user_id']=$user_id;
-                $res['userInfo']=[];
-                $res['userInfo']['user_name']=$result['user_name'];
-                $res['userInfo']['user_phone']=$result['user_phone'];
             }else{
                 //添加token的时候失败
-                $res['res']=-2;
             }
             
         }else{
-            //账户和密码不正确
+            //登录失败
             $res['res']=-1;
         }
         
@@ -89,8 +115,92 @@ class IndexController extends Controller {
     * 获得验证码
     */
     public function getCode(){
-        getCode();
+        
+        $user_id=I('user_id');
+        
+        $model=M('user_code');
+        $code=rand(1000,9999)."";
+        $md5Code=md5($user_id.$code.__KEY__);
+        $add=[];
+        $add['user_code']=$md5Code;
+        $add['user_id']=$user_id;
+        $add['add_time']=time();
+        
+        $result=$model->add($add,null,true);
+        
+        if($result){
+            $res['res']=1;
+            $res['msg']=$code;
+            $res['add']=$add;
+        }else{
+            $res['res']=-1;
+            $res['msg']=$result;
+        }
+        
+        echo json_encode($res);
+        
     }
+    
+    public function reg(){
+        
+        $user_id=I('user_id');
+        //检查是否已经注册
+        $model=M('user');
+        $where=[];
+        $where['user_id']=$user_id;
+        if($model->where()->find()==null){
+            //未注册
+            
+            $user_code=I('user_code');
+            $user_code=md5($user_id.$user_code.__KEY__);
+            
+            $where=[];
+            $where['user_id']=$user_id;
+            $model=M('user_code');
+            $result=$model->where($where)->find();
+            //取出后立刻删除
+            $model->where($where)->delete();
+            
+            if($result['user_code']===$user_code){
+                //验证码正确
+                //生成用户
+                $user_count=$model->count();
+                $model=M('user');
+                $add=[];
+                $add['user_id']=$user_id;
+                $add['user_phone']=$user_id;
+                $add['level']=1;
+                $add['user_name']='用户'.$user_count.rand(1000,9999);
+                $add['user_type']='经销商';
+                $add['add_time']=time();
+                $add['edit_time']=time();
+                $result=$model->add($add);
+                //=========判断=========
+                if($result){
+                    $res['res']=1;
+                    $res['msg']=$add;
+                }else{
+                    $res['res']=-1;
+                    $res['msg']=$result;
+                }
+                //=========判断end=========
+                
+            }else{
+                //验证码不正确
+                $res['res']=-2;
+            }
+            
+        }else{
+            //已经注册
+            $res['res']=-3;
+        }
+        //=========输出json=========
+        echo json_encode($res);
+        //=========输出json=========
+        
+    }
+    
+    
     /**
     * 判断是否登录
     */
@@ -126,5 +236,22 @@ class IndexController extends Controller {
         
         
     }
-    
+    public function sinOut(){
+        session(null);
+        $token=I('token');
+        $user_id=I('user_id');
+        $model=M('token');
+        $where=[];
+        $where['user_id']=$user_id;
+        $where['token']=$token;
+        $result= $model->where($where)->delete();
+        if($result){
+            $res['res']=$result;
+            $res['msg']=$result;
+        }else{
+            $res['res']=-1;
+            $res['msg']=$result;
+        }
+        echo json_encode($res);
+    }
 }

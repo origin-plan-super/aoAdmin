@@ -151,5 +151,26 @@ class IndexController extends Controller {
         //=========输出json=========
         
     }
+    public function sinOut(){
+        session(null);
+        // $token=I('token');
+        // $admin_id=I('admin_id');
+        // $model=M('admin');
+        // $where['admin_id']=$admin_id;
+        // $save['token']='';
+        // $result=$model->where($where)->save($save);
+        // //=========判断=========
+        // if($result){
+        //     $res['res']=$result;
+        //     $res['msg']=$result;
+        // }else{
+        //     $res['res']=-1;
+        //     $res['msg']=$result;
+        // }
+        // //=========判断end=========
+        // //=========输出json=========
+        // echo json_encode($res);
+        // //=========输出json=========
+    }
     
 }

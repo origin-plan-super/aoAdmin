@@ -10,9 +10,18 @@
 // +----------------------------------------------------------------------
 
 //跨域
-header('Access-Control-Allow-Origin:*');
+$origin = isset($_SERVER['HTTP_ORIGIN'])? $_SERVER['HTTP_ORIGIN'] : '';
+$allow_origin=[
+'http://192.168.1.251:8080',
+];
+$is=in_array($origin, $allow_origin);
+if(in_array($origin, $allow_origin)){
+    header('Access-Control-Allow-Origin:'.$origin);
+    header('Access-Control-Allow-Credentials:true');
+}else{
+    header('Access-Control-Allow-Origin:*');
+}
 // 应用入口文件
-
 // 检测PHP环境
 if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 
@@ -21,8 +30,6 @@ define('APP_DEBUG',True);
 
 // 定义应用目录
 define('APP_PATH','./app/');
-
-
 
 //自定义常量
 // 全局key

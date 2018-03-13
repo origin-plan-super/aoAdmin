@@ -21,7 +21,6 @@
                 <el-main>
                     <div class="content padding-10">
 
-
                         <dealer-list-comp ref='dealerList' v-show='list.isShow' @edit='edit' @add='add'></dealer-list-comp>
 
                         <dealer-comp type='add' title='添加代理商' v-show='addComp.isShow' @on-success='addSuccess' @cancel='cancel'></dealer-comp>

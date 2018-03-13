@@ -26,14 +26,14 @@ class OrderController extends CommonController {
             $result=getPageList($conf,$result);
             $result=toTime($result);
             
-            
             //获得订单们的总价
             foreach ($result as $key => $value) {
                 
                 $orderInfo=getOrderInfo($value['order_id']);
-                $money=getOrderMoney($orderInfo);
+                $goods_info=$orderInfo['goods_info'];
+                $user_id=$value['user_id'];
+                $money=getOrderMoney($goods_info,$user_id);
                 $result[$key]['money']=$money;
-                
             }
             
             $res['res']=1;
@@ -195,9 +195,12 @@ class OrderController extends CommonController {
             $result['order_id']=I('order_id');
             $result['order_info']=html($result['order_info']);
             $result['order_info']=json_decode($result['order_info'],true);
-            $order_info=$result['order_info'];
-            $result['money']=getOrderMoney($order_info);
             
+            $order_info=$result['order_info'];
+            $user_id=$result['user_id'];
+            $goods_info=$result['order_info']['goods_info'];
+            
+            $result['money']=getOrderMoney($goods_info,$user_id);
             
             $res['msg']=$result;
             

@@ -1,7 +1,6 @@
 // @ts-nocheck
 
 pages({
-
     data: {
         visible: false,
         isShowLoginForm: false,
@@ -54,10 +53,10 @@ pages({
 
             this.$refs[formName].validate((valid) => {
 
-
                 if (valid) {
                     //验证没有问题
                     $.post(serverRootAdmin + 'index/login', _this.adminInfo, (res) => {
+                        this.btnLoading = false;
 
                         res = JSON.parse(res);
                         _this.isShowAlert = true;
@@ -66,7 +65,6 @@ pages({
                             //登录成功
                             _this.alertType = 'success';
                             _this.alertInfo = '登录成功~正在为您跳转';
-                            this.btnLoading = false;
                             this.btnType = 'success';
                             this.btnText = '登录成功~';
 

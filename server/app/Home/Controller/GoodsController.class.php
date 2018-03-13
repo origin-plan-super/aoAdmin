@@ -55,7 +55,6 @@ class GoodsController extends CommonController {
         }
         //=========判断end=========
         
-        
         //=========输出json=========
         echo json_encode($res);
         //=========输出json=========

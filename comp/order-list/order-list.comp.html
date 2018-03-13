@@ -17,7 +17,6 @@
         </el-col>
     </el-row>
 
-
     <table-comp ref='table' :conf.sync='conf'>
 
 
@@ -36,15 +35,7 @@
 
         </el-table-column>
 
-        <el-table-column prop="money" width='auto' label="订单总价￥">
-
-            <template slot-scope="scope">
-                <span>
-                    {{scope.row.money}}
-                </span>
-            </template>
-
-        </el-table-column>
+        <el-table-column prop="money" width='auto' label="订单总价￥"></el-table-column>
 
         <el-table-column prop="add_time" width='auto' label="创建时间"></el-table-column>
         <el-table-column prop="edit_time" width='auto' label="最后修改时间"></el-table-column>
@@ -105,7 +96,9 @@
                                 </template>
                             </el-table-column>
                             <el-table-column prop="goods_title" label="产品标题"></el-table-column>
+                            <el-table-column prop="type.text" label="规格"></el-table-column>
                             <el-table-column prop="money" width='100' label="产品费用￥"></el-table-column>
+                            <el-table-column prop="num" width='100' label="数量"></el-table-column>
 
                         </el-table>
 

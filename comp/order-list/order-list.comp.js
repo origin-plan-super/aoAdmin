@@ -347,12 +347,11 @@ Vue.component('order-list-comp', function (resolve, reject) {
                                 order_id: order_id,
                             },
                             success: (res) => {
-
+                                console.log(res);
 
                                 if (res.res == 1) {
                                     //成功
                                     this.order = res.msg;
-                                    console.log(this.order);
 
                                     this.isShowInfo = true;
                                 }

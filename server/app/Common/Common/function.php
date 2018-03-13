@@ -552,26 +552,68 @@ function decGoods($orderListId){
 }
 
 //获得订单详细信息，返回的是json型数据
-
 function getOrderInfo($order_id){
     $model=M('order_info');
     $where=[];
     $where['order_id']=$order_id;
     $result= $model->where($where)->find();
     $orderInfo=$result['order_info'];
-    $orderInfo=html($orderInfo);
     $orderInfo=json_decode($orderInfo,true);
     return $orderInfo;
 }
 
-//获得一个订单的总价
-function getOrderMoney($orderInfo){
+//获得一个单独的订单的商品总价 ，这里得修改
+//传来的是商品的数组，返回的是商品数组中所有商品的总价
+
+function getOrderMoney($goodsList,$user_id){
     $money=0;
-    foreach ($orderInfo['goods_info'] as $key => $value) {
-        $money+=($value['money']*$value['num']);
+    //取得用户的级别
+    $User=M('user');
+    $userInfo=$User->where("user_id = $user_id")->find();
+    $userLevel=$userInfo['level'];
+    
+    foreach ($goodsList as $key => $value) {
+        //先去的这个商品的级别列表
+        $level_list=$value['level_list'];
+        //再取得用户的级别
+        //然后遍历级别
+        for ($i=0; $i <count($level_list) ; $i++) {
+            //如果列表中的级别等于用户的级别
+            if($level_list[$i]['level']==$userLevel){
+                //计价，num是用户选择的数量
+                $money+=$level_list[$i]['money']*$value['num'];
+            }
+        }
     }
+    
     return $money;
 }
+
+//让商品的钱等于用户级别的钱
+function setGoodsMoeny($goodsList,$user_id){
+    
+    $User=M('user');
+    $userInfo=$User->where("user_id = $user_id")->find();
+    $userLevel=$userInfo['level'];
+    
+    foreach ($goodsList as $key => $value) {
+        //先去的这个商品的级别列表
+        $level_list=$value['level_list'];
+        //再取得用户的级别
+        //然后遍历级别
+        for ($i=0; $i <count($level_list) ; $i++) {
+            //如果列表中的级别等于用户的级别
+            if($level_list[$i]['level']==$userLevel){
+                $goodsList[$key]['money']=$level_list[$i]['money'];
+            }
+        }
+    }
+    return $goodsList;
+    
+}
+
+//获得订单总价
+
 
 //将数组转换为json字符串
 function json($arr){
@@ -581,4 +623,35 @@ function json($arr){
 //将字符串转换为json数组
 function jsonD($arr ,$is=false){
     return json_decode($arr,$is);
+}
+
+
+//支付宝支付
+function alipay($orderId,$money,$type){
+    // alipay
+    Vendor('alipay.AlipayTradeWapPayContentBuilder');
+    
+    // alipay
+    $res=[];
+    $res['res']=1;
+    $res['msg']='支付宝支付';
+    $res['orderId']=$orderId;
+    $res['money']=$money;
+    $res['type']=$type;
+    echo json_encode($res);
+    // dump($res);
+    // $payRequestBuilder = new AlipayTradeWapPayContentBuilder();
+    // dump($payRequestBuilder);
+    die;
+}
+//余额支付
+function yePay($orderId,$money,$type){
+    $res=[];
+    $res['res']=1;
+    $res['msg']='余额支付';
+    $res['orderId']=$orderId;
+    $res['money']=$money;
+    $res['type']=$type;
+    echo json_encode($res);
+    die;
 }

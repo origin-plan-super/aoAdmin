@@ -66,7 +66,6 @@
 
                             <el-row>
                                 <el-col :span="24">
-
                                     <el-form-item prop="admin_code">
                                         <el-button :type="btnType" @click="onSubmit('ruleForm')" :loading='btnLoading'>{{btnText}}</el-button>
                                     </el-form-item>
@@ -75,10 +74,8 @@
 
                             <el-row>
                                 <el-col :span='24'>
-
                                     <el-alert v-show='isShowAlert' :title="alertInfo" :closable='alertClosable' :type="alertType" show-icon>
                                     </el-alert>
-
                                 </el-col>
                             </el-row>
 
