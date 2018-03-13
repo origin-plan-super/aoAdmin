@@ -148,7 +148,7 @@ class IndexController extends Controller {
         $model=M('user');
         $where=[];
         $where['user_id']=$user_id;
-        if($model->where()->find()==null){
+        if($model->where($where)->find()==null){
             //未注册
             
             $user_code=I('user_code');
