@@ -170,7 +170,7 @@ class IndexController extends Controller {
                 $add['user_id']=$user_id;
                 $add['user_phone']=$user_id;
                 $add['level']=1;
-                $add['user_name']='用户'.$user_count.rand(1000,9999);
+                $add['user_name']= $user_id;
                 $add['user_type']='经销商';
                 $add['add_time']=time();
                 $add['edit_time']=time();
