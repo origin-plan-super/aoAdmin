@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class PaperController extends CommonController{
+class PaperController extends Controller{
     
     /**
     * 获得
