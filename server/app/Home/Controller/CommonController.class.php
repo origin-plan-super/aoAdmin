@@ -28,7 +28,7 @@ class CommonController extends Controller {
         
         $is=isUserLogin();
         
-        if($is==1){
+        if($is){
             $model=M('user');
             $where['user_id']=session('user_id');
             $user_info=$model->where($where)->find();
