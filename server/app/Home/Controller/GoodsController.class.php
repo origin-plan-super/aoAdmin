@@ -22,7 +22,7 @@ class GoodsController extends CommonController {
     */
     public function getList(){
         $conf=initGetList();
-        
+        $user_id=session('user_id');
         $model=$conf['model'];
         $where=$conf['where'];
         $where['t1.user_id']=session('user_id');
@@ -47,6 +47,22 @@ class GoodsController extends CommonController {
             $result=toHtml($result,'imglist');
             $result=toHtml($result,'spec');
             $result=toHtml($result,'class_list');
+            
+            for ($i=0; $i <count($result) ; $i++) {
+                
+                $result[$i]['depot_list']=json_decode($result[$i]['depot_list']);
+                $result[$i]['level_list']=json_decode($result[$i]['level_list'],true);
+                $result[$i]['goods_info']=json_decode($result[$i]['goods_info'],true);
+                $result[$i]['imglist']=json_decode($result[$i]['imglist']);
+                $result[$i]['spec']=json_decode($result[$i]['spec']);
+                $result[$i]['class_list']=json_decode($result[$i]['class_list']);
+                
+            }
+            
+            $result=setGoodsMoeny($result,$user_id);
+            
+            
+            
             $res['res']=1;
             $res['msg']=$result;
             

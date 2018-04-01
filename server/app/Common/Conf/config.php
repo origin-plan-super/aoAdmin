@@ -40,7 +40,8 @@ return array(
 'gatewayUrl' => "https://openapi.alipay.com/gateway.do",
 
 //支付宝公钥,查看地址：https://openhome.alipay.com/platform/keyManage.htm 对应APPID下的支付宝公钥。
-'alipay_public_key' => "",
+'alipay_public_key' => "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApzO1D2fof0SveEzGBZTfmuOAWTRibfxvKayGRGwcM7R63Tc1QOJl4DWCCNqdfpU1ebxvZay4h+dpNzyX0Q6gTfzIyRNuI5iqhEDGNyHni0Sw3xlYw8fbQ2kjM2MrSUFD7CPT5bxinkjn1qS/U1VhArHM6ZZKAmMWsj4Wqw8kMRU8v5IKzxzu7S39iIEQJ3P0RKpEBzhK+u/2xRck3cfHDCx5KWB3pFEwHIODSsR87S2zbsdVysBX0psWaWxpFDTnhBOtgUa61twnk6Dzyl2ViE7zlndGQ44FPxsHY3zxQczG6fSHUXb0GRRjfwXtK/7AybdXPgo14ecdVCiuLJe9NwIDAQAB",
+
 
 ),
 

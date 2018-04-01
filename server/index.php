@@ -13,6 +13,7 @@
 $origin = isset($_SERVER['HTTP_ORIGIN'])? $_SERVER['HTTP_ORIGIN'] : '';
 $allow_origin=[
 'http://192.168.1.251:8080',
+'http://127.0.0.1:8080',
 ];
 $is=in_array($origin, $allow_origin);
 if(in_array($origin, $allow_origin)){

@@ -60,12 +60,14 @@ class UserController extends CommonController {
     
     
     public function getUserInfo(){
+        
+        $field=I('field')?I('field'):"user_id,user_name,user_phone,level,user_type,user_money,add_time";
         $model=M('user');
         $where=[];
         $where['user_id']=session('user_id');
         $result=$model
         ->where($where)
-        ->field('user_id,user_name,user_phone,level,user_type,user_money,add_time')
+        ->field($field)
         ->find();
         if($result){
             $res['res']=1;

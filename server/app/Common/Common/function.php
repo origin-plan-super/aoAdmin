@@ -215,15 +215,12 @@ function getPageList($conf,$data){
 function save(){
     
     //获取要保存的数据
-    $save=I('save');
+    $save=I('save','',false);
     unset($save['add_time']);
     
-    
     if($save['id']){
-        
         $id=$save['id'];
         unset($save['id']);
-        
     }
     
     
@@ -601,6 +598,7 @@ function setGoodsMoeny($goodsList,$user_id){
         $level_list=$value['level_list'];
         //再取得用户的级别
         //然后遍历级别
+        
         for ($i=0; $i <count($level_list) ; $i++) {
             //如果列表中的级别等于用户的级别
             if($level_list[$i]['level']==$userLevel){
@@ -630,7 +628,10 @@ function jsonD($arr ,$is=false){
 function alipay($orderId,$money,$type){
     // alipay
     Vendor('alipay.AlipayTradeWapPayContentBuilder');
+    Vendor('alipay.AlipayTradeService');
+    Vendor('alipay.AlipayTradeWapPayRequest');
     
+    $config=C('alipay');
     // alipay
     $res=[];
     $res['res']=1;
@@ -639,19 +640,118 @@ function alipay($orderId,$money,$type){
     $res['money']=$money;
     $res['type']=$type;
     echo json_encode($res);
-    // dump($res);
-    // $payRequestBuilder = new AlipayTradeWapPayContentBuilder();
-    // dump($payRequestBuilder);
+    dump($res);
+    $payRequestBuilder = new AlipayTradeWapPayContentBuilder();
+    dump($payRequestBuilder);
+    //商品描述，可空
+    $body = 'test';
+    //订单名称，必填
+    $subject = "TEST的订单";
+    //商户订单号，商户网站订单系统中唯一订单号，必填
+    $out_trade_no = $orderId;
+    //付款金额，必填
+    $total_amount = $money;
+    //超时时间
+    $timeout_express="1m";
+    
+    $payRequestBuilder->setBody($body);
+    $payRequestBuilder->setSubject($subject);
+    $payRequestBuilder->setOutTradeNo($out_trade_no);
+    $payRequestBuilder->setTotalAmount($total_amount);
+    $payRequestBuilder->setTimeExpress($timeout_express);
+    
+    $payResponse = new AlipayTradeService($config);
+    dump($payResponse);
+    
+    $result=$payResponse->wapPay($payRequestBuilder,$config['return_url'],$config['notify_url']);
+    dump($result);
+    
+    
     die;
 }
 //余额支付
-function yePay($orderId,$money,$type){
+function yePay($orderId,$money,$type,$user_id){
+    
+    //是否是多订单
+    $isMany = $type=="多订单支付";
+    //剩余的钱
+    $surplusMoney=0;
+    $where=[];
+    $where['user_id']=$user_id;
+    $User=M('user');
+    $userInfo=$User->where($where)->find();
+    //先取出用户的钱
+    $user_money=$userInfo['user_money'];
+    //先判断余额还有没
+    //减去用户的钱,设置剩余的钱为用户的钱减去支付的钱
+    $surplusMoney=$user_money - $money;
+    if($surplusMoney<0){
+        //余额不足
+        $res['res']=-2;
+        echo json_encode($res);
+        die;
+    }
+    
+    
+    $ids=[];
+    
+    if($isMany){
+        
+        //如果是多订单支付，需要取出每一个订单
+        $Orders=M('orders');
+        $where=[];
+        $where['orders_id']=$orderId;
+        $order_ids=$Orders->where($where)->field('order_ids')->find()['order_ids'];
+        $ids=json_decode($order_ids);
+        
+        $save=[];
+        $save['state']=1;
+        $Orders->where($where)->save($save);
+        
+    }else{
+        $ids=[$orderId];
+    }
+    
+    //无论多订单还是单订单，都将id转换为数组，然后统一设置支付成功状态
+    $Order=M('order');
+    $where=[];
+    $where['order_id']=['in',$ids];
+    $save=[];
+    $save['state']=2;
+    $result=$Order->where($where)->save($save);
+    
+    //订单状态修改完毕
+    
+    
     $res=[];
-    $res['res']=1;
-    $res['msg']='余额支付';
-    $res['orderId']=$orderId;
-    $res['money']=$money;
     $res['type']=$type;
+    
+    if($result){
+        //订单修改成功
+        $res['res']=1;
+        $res['msg']='余额支付';
+        
+        //设置支付状态
+        
+        //0 ：'全部'
+        //1 ：'待支付'
+        //2 ：'待发货'
+        //3 ：'待收货'
+        //4 ：'已收货'
+        //5 ：'退款/售后'
+        //保存用户的钱
+        $save=[];
+        $save['user_money']=$surplusMoney;
+        $where=[];
+        $where['user_id']=$user_id;
+        $result=$userInfo=$User->where($where)->save($save);
+        
+        
+        
+    }else{
+        //支付失败
+        $res['res']=-1;
+    }
     echo json_encode($res);
     die;
 }

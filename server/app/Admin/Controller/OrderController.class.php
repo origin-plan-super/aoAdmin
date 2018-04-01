@@ -96,8 +96,6 @@ class OrderController extends CommonController {
     */
     public function add(){
         
-        
-        
         $id=date('YmdHis',time()).rand(1000,9999);
         
         $res=add($id);
@@ -142,11 +140,9 @@ class OrderController extends CommonController {
         $result=$model->where($where)->find();
         $order_info=$result['order_info'];
         
-        $order_info=html($order_info);
         $order_info=json_decode($order_info,true);
         $order_info['courier_nmumber']=$courier_nmumber;
         $order_info=json_encode($order_info);
-        $order_info=htmlspecialchars($order_info);
         //开始追加
         $save['order_info']=$order_info;
         //保存
@@ -193,7 +189,6 @@ class OrderController extends CommonController {
             
             $res['res']=1;
             $result['order_id']=I('order_id');
-            $result['order_info']=html($result['order_info']);
             $result['order_info']=json_decode($result['order_info'],true);
             
             $order_info=$result['order_info'];

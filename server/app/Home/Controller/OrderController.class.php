@@ -63,13 +63,12 @@ class OrderController extends CommonController {
     //获得订单
     public function getOrderList(){
         
-        $where=I('where')?I('where'):[];
         $user_id=session('user_id');
         $model=M("order");
         $where['user_id']=$user_id;
         $res['count']=$model->where($where)->count()+0;
         
-        $where=[];
+        $where=I('where')?I('where'):[];
         $where['t1.user_id']=$user_id;
         $result= $model
         ->table('ao_order as t1,ao_order_info as t2')
@@ -102,6 +101,30 @@ class OrderController extends CommonController {
         //=========输出json=========
         echo json_encode($res);
         //=========输出json=========
+        
+    }
+    //获得订单信息
+    public function getOrderInfo(){
+        
+        $user_id=session('user_id');
+        $model=M("order");
+        $where=[];
+        $where['t1.order_id']=I('order_id');
+        
+        $result=$model
+        ->table("ao_order as t1,ao_order_info as t2")
+        ->where('t1.order_id = t2.order_id')
+        ->where($where)
+        ->find();
+        
+        if($result){
+            $res['res']=1;
+            $res['msg']=$result;
+        }else{
+            $res['res']=-1;
+            $res['msg']=$result;
+        }
+        echo json_encode($res);
         
     }
     
@@ -213,7 +236,7 @@ class OrderController extends CommonController {
         
     }
     public function pay(){
-        
+        $user_id=session('user_id');
         $orderLists=I('orderLists');
         //支付类型
         //0 余额支付
@@ -253,7 +276,7 @@ class OrderController extends CommonController {
             $add['order_ids']=json_encode($ids);
             $add['add_time']=time();
             $add['edit_time']=time();
-            // $Orders->add($add);
+            $Orders->add($add);
         }
         
         if($orderType=="多订单支付"){
@@ -266,14 +289,14 @@ class OrderController extends CommonController {
         
         if($payType==0){
             //余额支付
-            yePay($order_id,$money,$orderType);
+            yePay($order_id,$money,$orderType,$user_id);
             return;
         }
         
         
         if($payType==1){
             //支付宝
-            alipay($order_id,$money,$orderType);
+            alipay($order_id,$money,$orderType,$user_id);
             return;
         }
         if($payType===2){
@@ -398,7 +421,6 @@ class OrderController extends CommonController {
         $orderType='多订单支付';
         alipay($order_id,$money,$orderType);
     }
-    
     
     
 }
