@@ -754,3 +754,20 @@ function yePay($orderId,$money,$type,$user_id){
     echo json_encode($res);
     die;
 }
+
+
+//发送短信
+function msg($phone,$code){
+    
+    
+    Vendor('Message.api_demo.SmsDemo');
+    set_time_limit(0);
+    // header('Content-Type: text/plain; charset=utf-8');
+    
+    $response = SmsDemo::sendSms($phone,$code);
+    // echo "发送短信(sendSms)接口返回的结果:\n";
+    return $response;
+    
+    // print_r($response);
+    
+}

@@ -126,18 +126,27 @@ class IndexController extends Controller {
         $add['user_id']=$user_id;
         $add['add_time']=time();
         
-        $result=$model->add($add,null,true);
         
-        if($result){
-            $res['res']=1;
-            $res['msg']=$code;
-            $res['add']=$add;
+        //发送短信验证码
+        $isok=  msg($user_id,$code);
+        if($isok['Message']=='OK'){
+            $result=$model->add($add,null,true);
+            
+            if($result){
+                $res['res']=1;
+                $res['msg']=$code;
+                $res['add']=$add;
+            }else{
+                $res['res']=-1;
+                $res['msg']=$result;
+            }
+            
         }else{
-            $res['res']=-1;
-            $res['msg']=$result;
+            $res['res']=-2;
         }
         
         echo json_encode($res);
+        
         
     }
     
@@ -162,6 +171,7 @@ class IndexController extends Controller {
             $model->where($where)->delete();
             
             if($result['user_code']===$user_code){
+                
                 //验证码正确
                 //生成用户
                 $user_count=$model->count();
